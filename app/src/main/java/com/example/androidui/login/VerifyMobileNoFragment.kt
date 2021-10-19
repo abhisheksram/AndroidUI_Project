@@ -1,11 +1,8 @@
 package com.example.androidui.login
 
 import android.annotation.SuppressLint
-import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
@@ -24,10 +21,6 @@ class VerifyMobileNoFragment : Fragment(R.layout.fragment_verify_mobile_no) {
 
         val args = this.arguments
         val phone = args?.getString(Constants.Bundles.phone)
-
-        val pref_signed_in = "Sign_IN"
-        val sharedPreferences: SharedPreferences? =
-            context?.getSharedPreferences(Constants.SighIn.email, Context.MODE_PRIVATE)
 
         tvReceivePhone.text = "Enter the 4-Digit code sent to you at    $phone"
 

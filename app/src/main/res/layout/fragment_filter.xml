@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
             android:paddingHorizontal="20dp"
-            android:text="ALL"
+            android:text="@string/all"
             android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip
@@ -59,7 +59,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="BRUNCH"
+            android:text="@string/brunch"
             android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip
@@ -68,7 +68,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="DINNER"
+            android:text="@string/dinner"
             android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip
@@ -77,7 +77,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="BURGER"
+            android:text="@string/burger"
             android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip
@@ -86,7 +86,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="CHINESE"
+            android:text="@string/chinese"
             android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip
@@ -95,7 +95,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="PIZZA"
+            android:text="@string/pizza"
             android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip
@@ -104,7 +104,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="SALADS"
+            android:text="@string/salads"
             android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip
@@ -113,7 +113,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="SOUPS"
+            android:text="@string/soups"
             android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip
@@ -122,7 +122,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="BREAKFAST"
+            android:text="@string/breakfast"
             android:textSize="12sp" />
 
     </com.google.android.material.chip.ChipGroup>
@@ -135,7 +135,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/yugothib"
-        android:text="DIETARY"
+        android:text="@string/dietary"
         android:textSize="@dimen/t16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chipCategories" />
@@ -172,7 +172,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
             android:paddingHorizontal="20dp"
-            android:text="ANY"
+            android:text="@string/any"
             android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip
@@ -181,7 +181,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="VEGETARIAN"
+            android:text="@string/vegetarian"
             android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip
@@ -190,7 +190,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="VEGAN"
+            android:text="@string/vegan"
             android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip
@@ -199,7 +199,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="GLUTEN-FREE"
+            android:text="@string/gluten_free"
             android:textSize="12sp" />
 
 
@@ -213,7 +213,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/yugothib"
-        android:text="PRICE RANGE"
+        android:text="@string/price_range"
         android:textSize="@dimen/t16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chipDietary" />
@@ -249,7 +249,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
             android:paddingHorizontal="20dp"
-            android:text="$"
+            android:text="@string/dollar1"
             android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip
@@ -258,7 +258,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="$$"
+            android:text="@string/dollar2"
             android:textSize="12sp"
             tools:layout_editor_absoluteX="162dp"
             tools:layout_editor_absoluteY="101dp" />
@@ -269,7 +269,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="$$$"
+            android:text="@string/dollar3"
             android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip
@@ -278,7 +278,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="$$$$"
+            android:text="@string/dollar4"
             android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip
@@ -287,7 +287,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="$$$$$"
+            android:text="@string/dollar5"
             android:textSize="12sp" />
 
     </com.google.android.material.chip.ChipGroup>
@@ -301,7 +301,7 @@
         android:fontFamily="@font/yugothib"
         android:gravity="center_horizontal|center_vertical"
         android:letterSpacing=".3"
-        android:text="APPLY FILTERS"
+        android:text="@string/apply_filters"
         android:textColor="@color/White"
         android:textSize="@dimen/t14"
         android:textStyle="bold"

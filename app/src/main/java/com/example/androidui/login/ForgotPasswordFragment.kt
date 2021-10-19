@@ -11,7 +11,6 @@ import com.example.androidui.R
 import com.example.androidui.common.Constants
 import com.example.androidui.util.showToast
 import kotlinx.android.synthetic.main.fragment_forgot_password.*
-import kotlinx.android.synthetic.main.fragment_reset_email.*
 
 
 class ForgotPasswordFragment : Fragment(R.layout.fragment_forgot_password) {

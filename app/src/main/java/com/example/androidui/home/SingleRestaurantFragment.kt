@@ -15,7 +15,6 @@ import com.example.androidui.data.ImageList
 import com.example.androidui.data.Partners
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_single_restaurant.*
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
@@ -75,9 +74,7 @@ class SingleRestaurantFragment : Fragment() {
             )
         )
 
-        requireActivity().window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        requireActivity().window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
         requireActivity().actionBar?.hide()
 

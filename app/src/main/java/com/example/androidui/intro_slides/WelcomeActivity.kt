@@ -18,7 +18,6 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.androidui.R
 import com.example.androidui.common.Constants
 import com.example.androidui.login.LoginActivity
-import com.example.androidui.login.SignInFragment
 import kotlinx.android.synthetic.main.activity_welcome.*
 
 

@@ -27,7 +27,6 @@ object Constants {
 
     object Prefs {
         const val title = "Slide"
-        const val desc = "Slide"
         const val image = "image"
     }
 }

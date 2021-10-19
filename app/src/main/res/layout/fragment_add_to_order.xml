@@ -20,7 +20,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tvAddToOrderName"
@@ -28,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:text="Cookie Sandwich"
+        android:text="@string/cookie_sandwich"
         android:textColor="@color/Black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +43,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:textSize="@dimen/t16"
-        android:text="Shortbread, chocolate turtle cookies, and red velvet. 8 ounces cream cheese, softened."
+        android:text="@string/shortbread_chocolate_turtle_cookies_and_red_velvet_8_ounces_cream_cheese_softened"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAddToOrderName" />
@@ -54,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:text="$$   -   Chinese   -   American   -   Deshi Food"
+        android:text="@string/chinese_american_deshi_food"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAddToOrderText" />
@@ -67,7 +68,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/yugothib"
-        android:text="Choice of top Cookie"
+        android:text="@string/choice_of_top_cookie"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAddToOrderDetails" />
@@ -80,7 +81,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView13"
-        app:srcCompat="@drawable/ic_required" />
+        app:srcCompat="@drawable/ic_required"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textView14"
@@ -89,7 +91,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/yugothib"
-        android:text="Choice of Bottom Cookie"
+        android:text="@string/choice_of_bottom_cookie"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroupTop" />
@@ -103,7 +105,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView14"
-        app:srcCompat="@drawable/ic_required" />
+        app:srcCompat="@drawable/ic_required"
+        tools:ignore="ContentDescription" />
 
     <RadioGroup
         android:id="@+id/radioGroupTop"
@@ -121,7 +124,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="Chocolate Chip"
+            android:text="@string/chocolate_chip"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16"
             app:layout_constraintTop_toBottomOf="@+id/radioGroupTop" />
@@ -131,7 +134,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="Cookies and Cream"
+            android:text="@string/cookies_and_cream"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16"
             app:layout_constraintTop_toBottomOf="@+id/rb1" />
@@ -141,7 +144,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="Funfetti"
+            android:text="@string/funfetti"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16"
             app:layout_constraintTop_toBottomOf="@+id/rb2" />
@@ -151,7 +154,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="M and M"
+            android:text="@string/m_and_m"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16"
             app:layout_constraintTop_toBottomOf="@+id/rb3" />
@@ -161,7 +164,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="Red Velvet"
+            android:text="@string/red_velvet"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16"
             app:layout_constraintTop_toBottomOf="@+id/rb4" />
@@ -171,7 +174,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="Peanut Butter"
+            android:text="@string/peanut_butter"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16"
             app:layout_constraintTop_toBottomOf="@+id/rb5" />
@@ -181,7 +184,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="Snickerdoodle"
+            android:text="@string/snickerdoodle"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16"
             app:layout_constraintTop_toBottomOf="@+id/rb6" />
@@ -191,7 +194,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="White Chocolate Macadamia"
+            android:text="@string/white_chocolate_macadamia"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16"
             app:layout_constraintTop_toBottomOf="@+id/rb7" />
@@ -215,7 +218,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="Chocolate Chip"
+            android:text="@string/chocolate_chip"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16"
             app:layout_constraintTop_toBottomOf="@+id/radioGroupBottom" />
@@ -225,7 +228,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="Cookies and Cream"
+            android:text="@string/cookies_and_cream"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16"
             app:layout_constraintTop_toBottomOf="@+id/rb1" />
@@ -235,7 +238,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="Funfetti"
+            android:text="@string/funfetti"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16"
             app:layout_constraintTop_toBottomOf="@+id/rb12" />
@@ -245,7 +248,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="M and M"
+            android:text="@string/m_and_m"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16"
             app:layout_constraintTop_toBottomOf="@+id/rb13" />
@@ -255,7 +258,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="Red Velvet"
+            android:text="@string/red_velvet"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16"
             app:layout_constraintTop_toBottomOf="@+id/rb14" />
@@ -265,7 +268,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="Peanut Butter"
+            android:text="@string/peanut_butter"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16"
             app:layout_constraintTop_toBottomOf="@+id/rb15" />
@@ -275,7 +278,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="Snickerdoodle"
+            android:text="@string/snickerdoodle"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16"
             app:layout_constraintTop_toBottomOf="@+id/rb16" />
@@ -285,7 +288,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="White Chocolate Macadamia"
+            android:text="@string/white_chocolate_macadamia"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16"
             app:layout_constraintTop_toBottomOf="@+id/rb17" />
@@ -299,7 +302,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/yugothib"
-        android:text="Add Special Instructions"
+        android:text="@string/add_special_instructions"
         android:textSize="@dimen/t16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroupBottom" />
@@ -310,7 +313,7 @@
         android:layout_height="40dp"
         android:layout_marginEnd="20dp"
         android:background="@color/trans"
-        android:text=">"
+        android:text="@string/forward"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvSpecialInstructions"
         app:layout_constraintEnd_toEndOf="parent"
@@ -332,7 +335,7 @@
             android:id="@+id/btnAddToOrderMinus"
             android:layout_width="59dp"
             android:layout_height="wrap_content"
-            android:text="-"
+            android:text="@string/minus"
             android:textSize="24sp" />
 
         <TextView
@@ -340,14 +343,14 @@
             android:layout_width="69dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="01"
+            android:text="@string/_01"
             android:textSize="24sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnAddtoOrderPlus"
             android:layout_width="58dp"
             android:layout_height="wrap_content"
-            android:text="+"
+            android:text="@string/plus"
             android:textSize="24sp" />
 
 
@@ -365,7 +368,7 @@
         android:background="@drawable/intro_button_bg"
         android:fontFamily="@font/yugothib"
         android:gravity="center_horizontal|center_vertical"
-        android:text="ADD TO ORDER"
+        android:text="@string/add_to_order"
         android:textColor="@color/White"
         android:textSize="@dimen/t14"
         android:textStyle="bold"

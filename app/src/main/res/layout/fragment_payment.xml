@@ -15,7 +15,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:fontFamily="@font/yugothib"
-        android:text="Add your payment methods"
+        android:text="@string/add_your_payment_methods"
         android:textColor="@color/Black"
         android:textSize="@dimen/t24"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +32,7 @@
         android:fontFamily="@font/yugothib"
         android:gravity="center"
         android:paddingHorizontal="30dp"
-        android:text="This card will only be charged when you place an order."
+        android:text="@string/this_card_will_only_be_charged_when_you_place_an_order"
         android:textSize="@dimen/t16"
         android:textColor="#868686"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,12 +52,13 @@
         android:inputType="number"
         android:maxLength="20"
         android:paddingHorizontal="20dp"
-        android:hint="4343 4343 4343 4343"
+        android:hint="@string/_4343_4343_4343_4343"
         android:textColor="#868686"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPaymentText" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPaymentText"
+        tools:ignore="Autofill" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -80,11 +81,12 @@
                 android:background="@drawable/otp_border"
                 android:gravity="center"
                 android:inputType="number"
-                android:hint="MM/YY"
+                android:hint="@string/mm_yy"
                 android:textColor="#868686"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="Autofill" />
 
             <EditText
                 android:id="@+id/etCVV"
@@ -95,11 +97,12 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="3"
-                android:hint="CVV"
+                android:hint="@string/cvv"
                 android:textColor="#868686"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="Autofill" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -116,7 +119,7 @@
         android:fontFamily="@font/yugothib"
         android:gravity="center_horizontal|center_vertical"
         android:letterSpacing=".3"
-        android:text="ADD CARD"
+        android:text="@string/add_card"
         android:textColor="@color/White"
         android:textSize="@dimen/t14"
         android:textStyle="bold"
@@ -139,7 +142,7 @@
         android:gravity="center_horizontal|center_vertical"
         android:letterSpacing=".3"
         android:paddingHorizontal="50dp"
-        android:text="SCAN CARD"
+        android:text="@string/scan_card"
         android:textColor="@color/Black"
         android:textSize="@dimen/t14"
         android:textStyle="bold"

@@ -7,12 +7,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.androidui.util.showToast
 import kotlinx.android.synthetic.main.fragment_payment.*
-import android.text.Editable
-
-import android.text.TextWatcher
 import com.example.androidui.R
-import java.lang.StringBuilder
-
 
 class PaymentFragment : Fragment(R.layout.fragment_payment) {
 

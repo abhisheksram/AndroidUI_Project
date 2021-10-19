@@ -32,7 +32,7 @@
             android:layout_height="50dp"
             android:layout_weight=".8"
             android:gravity="center"
-            android:text="Cancel"
+            android:text="@string/cancel"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16" />
 
@@ -47,7 +47,7 @@
         android:layout_marginTop="10dp"
         android:layout_weight=".8"
         android:gravity="center"
-        android:text="Recent Searches"
+        android:text="@string/recent_searches"
         android:textColor="@color/Black"
         android:textSize="@dimen/t16"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
         android:layout_marginEnd="30dp"
         android:layout_weight=".8"
         android:gravity="center"
-        android:text="Clear All"
+        android:text="@string/clear_all"
         android:textColor="@color/Black"
         android:textSize="@dimen/t16"
         app:layout_constraintEnd_toEndOf="parent"
