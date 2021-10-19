@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/trans</item>
+    </style>
+    <style name="get_started">
+        <item name="android:textSize">14sp </item>
+        <item name="android:letterSpacing"> 0.06 </item>
+        <item name="android:textColor">  #FFFFFF </item>
+    </style>
+
+    <style name="title">
+        <item name="android:textColor">#3A3A3A</item>
+    </style>
+
+    <style name="all_your_fa">
+        <item name="android:textSize">30sp </item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#010F07</item>
+        <item name="android:shadowColor">#40000000 </item>
+        <item name="android:shadowDx"> 2</item>
+        <item name="android:shadowDy"> 5 </item>
+        <item name="android:shadowRadius">5 </item>
+    </style>
+
+    <style name="order_from_">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">-0.03 </item>
+        <item name="android:textColor">#868686  </item>
+    </style>
+
+    <style name="free_delive">
+
+        <item name="android:textSize">
+            30sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.01
+        </item>
+
+        <item name="android:textColor">
+            #010F07
+        </item>
+
+    </style>
+
+    <style name="free_deliver_text">
+
+        <item name="android:textSize">
+            16sp
+        </item>
+
+        <item name="android:letterSpacing">
+            -0.05
+        </item>
+
+        <item name="android:lineSpacingExtra">
+            @dimen/d5
+        </item>
+
+        <item name="android:textColor">
+            #868686
+        </item>
+
+    </style>
+
+    <style name="email_address">
+
+        <item name="android:textSize">
+            12sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.07
+        </item>
+
+        <item name="android:textColor">
+            #868686
+        </item>
+
+    </style>
+
+    <style name="OtpWidget"/>
+
+    <style name="OtpWidget.OtpView" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@null</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="CustomChipChoice" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/background_color_chip_state_list</item>
+        <item name="android:textColor">@color/text_color_chip_state_list</item>
+    </style>
+
+</resources>

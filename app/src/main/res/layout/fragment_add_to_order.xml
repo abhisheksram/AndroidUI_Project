@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AddToOrderFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/imageAddToOrder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,4:3"
+        android:src="@mipmap/single_restaurant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvAddToOrderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Cookie Sandwich"
+        android:textColor="@color/Black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageAddToOrder" />
+
+    <TextView
+        android:id="@+id/tvAddToOrderText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="@dimen/t16"
+        android:text="Shortbread, chocolate turtle cookies, and red velvet. 8 ounces cream cheese, softened."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddToOrderName" />
+
+
+    <TextView
+        android:id="@+id/tvAddToOrderDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="$$   -   Chinese   -   American   -   Deshi Food"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddToOrderText" />
+
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/yugothib"
+        android:text="Choice of top Cookie"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddToOrderDetails" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView13"
+        app:srcCompat="@drawable/ic_required" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/yugothib"
+        android:text="Choice of Bottom Cookie"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupTop" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView14"
+        app:srcCompat="@drawable/ic_required" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="Chocolate Chip"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t16"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupTop" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="Cookies and Cream"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t16"
+            app:layout_constraintTop_toBottomOf="@+id/rb1" />
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="Funfetti"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t16"
+            app:layout_constraintTop_toBottomOf="@+id/rb2" />
+
+        <RadioButton
+            android:id="@+id/rb4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="M and M"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t16"
+            app:layout_constraintTop_toBottomOf="@+id/rb3" />
+
+        <RadioButton
+            android:id="@+id/rb5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="Red Velvet"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t16"
+            app:layout_constraintTop_toBottomOf="@+id/rb4" />
+
+        <RadioButton
+            android:id="@+id/rb6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="Peanut Butter"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t16"
+            app:layout_constraintTop_toBottomOf="@+id/rb5" />
+
+        <RadioButton
+            android:id="@+id/rb7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="Snickerdoodle"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t16"
+            app:layout_constraintTop_toBottomOf="@+id/rb6" />
+
+        <RadioButton
+            android:id="@+id/rb8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="White Chocolate Macadamia"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t16"
+            app:layout_constraintTop_toBottomOf="@+id/rb7" />
+
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14">
+
+        <RadioButton
+            android:id="@+id/rb11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="Chocolate Chip"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t16"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupBottom" />
+
+        <RadioButton
+            android:id="@+id/rb12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="Cookies and Cream"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t16"
+            app:layout_constraintTop_toBottomOf="@+id/rb1" />
+
+        <RadioButton
+            android:id="@+id/rb13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="Funfetti"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t16"
+            app:layout_constraintTop_toBottomOf="@+id/rb12" />
+
+        <RadioButton
+            android:id="@+id/rb14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="M and M"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t16"
+            app:layout_constraintTop_toBottomOf="@+id/rb13" />
+
+        <RadioButton
+            android:id="@+id/rb15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="Red Velvet"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t16"
+            app:layout_constraintTop_toBottomOf="@+id/rb14" />
+
+        <RadioButton
+            android:id="@+id/rb16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="Peanut Butter"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t16"
+            app:layout_constraintTop_toBottomOf="@+id/rb15" />
+
+        <RadioButton
+            android:id="@+id/rb17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="Snickerdoodle"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t16"
+            app:layout_constraintTop_toBottomOf="@+id/rb16" />
+
+        <RadioButton
+            android:id="@+id/rb18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="White Chocolate Macadamia"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t16"
+            app:layout_constraintTop_toBottomOf="@+id/rb17" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvSpecialInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/yugothib"
+        android:text="Add Special Instructions"
+        android:textSize="@dimen/t16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupBottom" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddSpecialInstructions"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/trans"
+        android:text=">"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSpecialInstructions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvSpecialInstructions" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSpecialInstructions">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddToOrderMinus"
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvAddToOrderCount"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="01"
+            android:textSize="24sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddtoOrderPlus"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="24sp" />
+
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddToOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/intro_button_bg"
+        android:fontFamily="@font/yugothib"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="ADD TO ORDER"
+        android:textColor="@color/White"
+        android:textSize="@dimen/t14"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="TextContrastCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

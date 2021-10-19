@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/image_RV_home_best_restaurants"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bitmap_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_RV_home_best_restaurantsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/yugothib"
+        android:text="Name"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_RV_home_best_restaurants" />
+
+    <TextView
+        android:id="@+id/tv_RV_home_best_restaurantsLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/yugothib"
+        android:text="Location"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_RV_home_best_restaurantsName" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipRating1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/yugothib"
+        android:text="4.5"
+        android:textColor="@color/White"
+        app:chipBackgroundColor="#EEA734"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_RV_home_best_restaurantsLocation" />
+
+    <TextView
+        android:id="@+id/tv_RV_home_items1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/yugothib"
+        android:text="25 min"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chipRating1"
+        app:layout_constraintStart_toEndOf="@+id/chipRating1"
+        app:layout_constraintTop_toTopOf="@+id/chipRating1" />
+
+    <TextView
+        android:id="@+id/tv_RV_home_items2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/yugothib"
+        android:text="Free Delivery"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chipRating1"
+        app:layout_constraintStart_toEndOf="@+id/tv_RV_home_items3"
+        app:layout_constraintTop_toTopOf="@+id/chipRating1" />
+
+    <TextView
+        android:id="@+id/tv_RV_home_items3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="-10dp"
+        android:fontFamily="@font/yugothib"
+        android:text="."
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_RV_home_items1"
+        app:layout_constraintTop_toTopOf="@+id/chipRating1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

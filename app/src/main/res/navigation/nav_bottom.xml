@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_bottom"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.androidui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@+id/navigation_search" />
+        <action
+            android:id="@+id/action_navigation_home_to_featuredPartnersFragment"
+            app:destination="@id/featuredPartnersFragment"/>
+        <action
+            android:id="@+id/action_navigation_home_to_filterFragment"
+            app:destination="@id/filterFragment"/>
+        <action
+            android:id="@+id/action_navigation_home_to_topRestaurantFragment"
+            app:destination="@id/topRestaurantFragment"/>
+        <action
+            android:id="@+id/action_navigation_home_to_allRestaurantFragment"
+            app:destination="@id/allRestaurantFragment"/>
+        <action
+            android:id="@+id/action_navigation_home_to_singleRestaurantFragment"
+            app:destination="@id/singleRestaurantFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.androidui.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_ordersFragment"
+            app:destination="@+id/navigation_orders"/>
+        <action
+            android:id="@+id/action_navigation_search_to_categoriesFragment"
+            app:destination="@id/categoriesFragment"/>
+        <action
+            android:id="@+id/action_navigation_search_to_searchItemsFragment"
+            app:destination="@id/searchItemsFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_orders"
+        android:name="com.example.androidui.bottom_navigation.OrdersFragment"
+        android:label="Orders"
+        tools:layout="@layout/fragment_orders" >
+        <action
+            android:id="@+id/action_ordersFragment_to_profileFragment"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.androidui.bottom_navigation.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/navigation_home"/>
+    </fragment>
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.example.androidui.fragments.FilterFragment"
+        android:label="Filter"
+        tools:layout="@layout/fragment_filter" >
+        <action
+            android:id="@+id/action_filterFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/featuredPartnersFragment"
+        android:name="com.example.androidui.home.FeaturedPartnersFragment"
+        android:label="Featured Partners"
+        tools:layout="@layout/fragment_featured_partners" />
+    <fragment
+        android:id="@+id/topRestaurantFragment"
+        android:name="com.example.androidui.home.TopRestaurantFragment"
+        android:label="Best Restaurants"
+        tools:layout="@layout/fragment_top_restaurant" />
+    <fragment
+        android:id="@+id/allRestaurantFragment"
+        android:name="com.example.androidui.home.AllRestaurantFragment"
+        android:label="All Restaurants"
+        tools:layout="@layout/fragment_all_restaurant" >
+        <action
+            android:id="@+id/action_allRestaurantFragment_to_singleRestaurantFragment"
+            app:destination="@id/singleRestaurantFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.androidui.search.CategoriesFragment"
+        android:label="Top Categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_navigation_search"
+            app:destination="@id/navigation_search" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchItemsFragment"
+        android:name="com.example.androidui.search.SearchItemsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_search_items" >
+        <action
+            android:id="@+id/action_searchItemsFragment_to_burgersFragment"
+            app:destination="@id/burgersFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/burgersFragment"
+        android:name="com.example.androidui.search.BurgersFragment"
+        android:label="Burgers"
+        tools:layout="@layout/fragment_burgers" >
+        <action
+            android:id="@+id/action_burgersFragment_to_navigation_search"
+            app:destination="@id/navigation_search" />
+        <action
+            android:id="@+id/action_burgersFragment_to_searchItemsFragment"
+            app:destination="@id/searchItemsFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/singleRestaurantFragment"
+        android:name="com.example.androidui.home.SingleRestaurantFragment"
+        android:label=""
+        tools:layout="@layout/fragment_single_restaurant" >
+        <action
+            android:id="@+id/action_singleRestaurantFragment_to_addToOrderFragment"
+            app:destination="@id/addToOrderFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addToOrderFragment"
+        android:name="com.example.androidui.fragments.AddToOrderFragment"
+        android:label=""
+        tools:layout="@layout/fragment_add_to_order" >
+        <action
+            android:id="@+id/action_addToOrderFragment_to_yourOrdersFragment"
+            app:destination="@id/yourOrdersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yourOrdersFragment"
+        android:name="com.example.androidui.fragments.YourOrdersFragment"
+        android:label="Your Orders"
+        tools:layout="@layout/fragment_your_orders" >
+        <action
+            android:id="@+id/action_yourOrdersFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.androidui.fragments.PaymentFragment"
+        android:label=""
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+</navigation>

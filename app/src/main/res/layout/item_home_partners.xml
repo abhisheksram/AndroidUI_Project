@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_RV_home_partners"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,4:3"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bitmap_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_RV_home_itemsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/yugothib"
+        android:text="Name"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_RV_home_partners" />
+
+    <TextView
+        android:id="@+id/tv_RV_home_itemsLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/yugothib"
+        android:text="Location"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_RV_home_itemsName" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/yugothib"
+        android:text="4.5"
+        android:textColor="@color/White"
+        app:chipBackgroundColor="#EEA734"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_RV_home_itemsLocation" />
+
+    <TextView
+        android:id="@+id/tv_RV_home_items1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/yugothib"
+        android:text="25min"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chipRating"
+        app:layout_constraintStart_toEndOf="@+id/chipRating"
+        app:layout_constraintTop_toTopOf="@+id/chipRating" />
+
+    <TextView
+        android:id="@+id/tv_RV_home_items2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/yugothib"
+        android:text="Free Delivery"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chipRating"
+        app:layout_constraintStart_toEndOf="@+id/tv_RV_home_items3"
+        app:layout_constraintTop_toTopOf="@+id/chipRating" />
+
+    <TextView
+        android:id="@+id/tv_RV_home_items3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-10dp"
+        android:fontFamily="@font/yugothib"
+        android:text="."
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_RV_home_items1"
+        app:layout_constraintTop_toTopOf="@+id/chipRating" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

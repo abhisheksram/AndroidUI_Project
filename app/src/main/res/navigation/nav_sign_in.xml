@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_sign_in"
+    app:startDestination="@id/signInFragment2">
+
+    <fragment
+        android:id="@+id/signInFragment2"
+        android:name="com.example.androidui.login.SignInFragment"
+        android:label="Sign In"
+        tools:layout="@layout/fragment_signin" >
+        <action
+            android:id="@+id/action_signInFragment2_to_forgotPasswordFragment2"
+            app:destination="@id/forgotPasswordFragment2" />
+        <action
+            android:id="@+id/action_signInFragment2_to_createAccountFragment2"
+            app:destination="@id/createAccountFragment2" />
+        <action
+            android:id="@+id/action_signInFragment2_to_locationActivity"
+            app:destination="@id/locationActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment2"
+        android:name="com.example.androidui.login.ForgotPasswordFragment"
+        android:label="Forgot Password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment2_to_resetEmailFragment2"
+            app:destination="@id/resetEmailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAccountFragment2"
+        android:name="com.example.androidui.login.CreateAccountFragment"
+        android:label="Create Account"
+        tools:layout="@layout/fragment_create_account" >
+        <action
+            android:id="@+id/action_createAccountFragment2_to_provideMobileNoFragment2"
+            app:destination="@id/provideMobileNoFragment2" />
+        <action
+            android:id="@+id/action_createAccountFragment2_to_signInFragment2"
+            app:destination="@id/signInFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetEmailFragment2"
+        android:name="com.example.androidui.login.ResetEmailFragment"
+        android:label="Forgot Password"
+        tools:layout="@layout/fragment_reset_email" >
+        <action
+            android:id="@+id/action_resetEmailFragment2_to_signInFragment2"
+            app:destination="@id/signInFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/provideMobileNoFragment2"
+        android:name="com.example.androidui.login.ProvideMobileNoFragment"
+        android:label="Login to Tamang Food Services"
+        tools:layout="@layout/fragment_provide_mobile_no" >
+        <action
+            android:id="@+id/action_provideMobileNoFragment2_to_verifyMobileNoFragment2"
+            app:destination="@id/verifyMobileNoFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyMobileNoFragment2"
+        android:name="com.example.androidui.login.VerifyMobileNoFragment"
+        android:label="Login to Foodly"
+        tools:layout="@layout/fragment_verify_mobile_no" >
+        <action
+            android:id="@+id/action_verifyMobileNoFragment2_to_signInFragment2"
+            app:destination="@id/signInFragment2" />
+    </fragment>
+    <activity
+        android:id="@+id/locationActivity"
+        android:name="com.example.androidui.LocationActivity"
+        android:label=""
+        tools:layout="@layout/activity_location" />
+</navigation>

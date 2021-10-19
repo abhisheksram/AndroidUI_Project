@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.YourOrdersFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvYourOrders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/d10"
+        android:foregroundGravity="top"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnConfirmOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/intro_button_bg"
+        android:fontFamily="@font/yugothib"
+        android:gravity="center_horizontal|center_vertical"
+        android:letterSpacing=".3"
+        android:text="CONTINUE"
+        android:textColor="@color/White"
+        android:textSize="@dimen/t14"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="15dp"
+        android:text="Subtotal"
+        android:textSize="@dimen/t16"
+        android:textColor="@color/Black"
+        android:fontFamily="@font/yugothib"
+        app:layout_constraintBottom_toTopOf="@+id/textView20"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Delivery"
+        android:textSize="@dimen/t16"
+        android:textColor="@color/Black"
+        android:fontFamily="@font/yugothib"
+        app:layout_constraintBottom_toTopOf="@+id/textView23"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="AUD$30"
+        android:textSize="@dimen/t16"
+        android:textColor="@color/Black"
+        android:fontFamily="@font/yugothib"
+        app:layout_constraintBottom_toBottomOf="@+id/textView19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/tvTotalDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="$0"
+        android:textSize="@dimen/t16"
+        android:textColor="@color/Black"
+        android:fontFamily="@font/yugothib"
+        app:layout_constraintBottom_toTopOf="@+id/tvTotalOrder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/tvTotalOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="AUD$30"
+        android:textSize="@dimen/t16"
+        android:fontFamily="@font/yugothib"
+        android:textColor="#F8B64C"
+        app:layout_constraintBottom_toTopOf="@+id/tvAddMoreItems"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAddMoreItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Add More Items"
+        android:textColor="#F8B64C"
+        android:textSize="@dimen/t16"
+        android:fontFamily="@font/yugothib"
+        app:layout_constraintBottom_toTopOf="@+id/tvPromoCode"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPromoCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="30dp"
+        android:text="Promo Code"
+        android:fontFamily="@font/yugothib"
+        android:textSize="@dimen/t16"
+        app:layout_constraintBottom_toTopOf="@+id/btnConfirmOrder"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/btnAddMoreItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text=">"
+        android:textColor="#F8B64C"
+        android:textSize="@dimen/t24"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAddMoreItems"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvAddMoreItems" />
+
+    <TextView
+        android:id="@+id/btnPromoCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text=">"
+        android:textSize="@dimen/t24"
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPromoCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvPromoCode" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Total(incl. VAT"
+        android:textSize="@dimen/t16"
+        android:textColor="@color/Black"
+        android:fontFamily="@font/yugothib"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTotalOrder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTotalOrder" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

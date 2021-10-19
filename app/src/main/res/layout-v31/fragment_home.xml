@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="400dp"
+            android:layout_height="250dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_home_banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvHome1" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerHome1"
+            android:layout_width="match_parent"
+            app:layout_constraintDimensionRatio="H,4:2"
+            android:layout_height="0dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/bitmap_bg"
+            android:clipToOutline="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDeliveryTo" />
+
+        <LinearLayout
+            android:id="@+id/lytViewPager1Dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/viewPagerHome1"
+            app:layout_constraintEnd_toEndOf="@id/viewPagerHome1">
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/yugothib"
+            android:text="DELIVERY TO"
+            android:textColor="#EEA734"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDeliveryTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:fontFamily="@font/yugothib"
+            android:text="Delivery To"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDelivery" />
+
+
+        <TextView
+            android:id="@+id/tvHomeFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/yugothib"
+            android:text="Filter"
+            android:textColor="@color/Orange"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvDeliveryTo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvDelivery" />
+
+        <TextView
+            android:id="@+id/tvFeaturedPartners"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/yugothib"
+            android:text="Featured Partners"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewPagerHome1" />
+
+        <TextView
+            android:id="@+id/tvSeeAll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/yugothib"
+            android:text="See All"
+            android:textColor="#EEA734"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFeaturedPartners"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvFeaturedPartners" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHome1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFeaturedPartners" />
+
+        <TextView
+            android:id="@+id/tvBestPicks"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/yugothib"
+            android:text="Best Picks Restaurants by team"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+        <TextView
+            android:id="@+id/tvSeeAll2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/yugothib"
+            android:text="See All"
+            android:textColor="#EEA734"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBestPicks"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvBestPicks" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHome2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/d10"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBestPicks" />
+
+        <TextView
+            android:id="@+id/tvAllRestaurants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/yugothib"
+            android:text="All Restaurants"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/t24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvHome2" />
+
+        <TextView
+            android:id="@+id/tvSeeAll3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/yugothib"
+            android:text="See All"
+            android:textColor="#EEA734"
+            app:layout_constraintBottom_toBottomOf="@+id/tvAllRestaurants"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvAllRestaurants" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHome3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/d10"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAllRestaurants" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/d10"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/imageRVRestaurants"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/d10"
+        app:layout_constraintDimensionRatio="H,4:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/my_edit_border"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvRVRestaurantName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/yugothib"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageRVRestaurants" />
+
+    <TextView
+        android:id="@+id/tvRVRestaurantPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="$$"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvRVRestaurantName"
+        app:layout_constraintTop_toBottomOf="@+id/tvRVRestaurantName" />
+
+    <ImageView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/indicator1"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRVRestaurantPrice"
+        app:layout_constraintStart_toEndOf="@+id/tvRVRestaurantPrice"
+        app:layout_constraintTop_toTopOf="@+id/tvRVRestaurantPrice" />
+
+    <TextView
+        android:id="@+id/tvRVRestaurantCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/yugothib"
+        android:text="Chinese"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRVRestaurantPrice"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toTopOf="@+id/tvRVRestaurantPrice" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

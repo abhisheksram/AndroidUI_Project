@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FilterFragment">
+
+
+    <TextView
+        android:id="@+id/tvCategories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/yugothib"
+        android:text="@string/categories"
+        android:textSize="@dimen/t16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvClearAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:background="@color/trans"
+        android:text="@string/clear_all"
+        android:textSize="12sp"
+        android:fontFamily="@font/yugothib"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCategories"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvCategories" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipCategories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategories">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipAll"
+            style="@style/CustomChipChoice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:paddingHorizontal="20dp"
+            android:text="ALL"
+            android:textSize="12sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBrunch"
+            style="@style/CustomChipChoice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="BRUNCH"
+            android:textSize="12sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipDinner"
+            style="@style/CustomChipChoice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="DINNER"
+            android:textSize="12sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBurger"
+            style="@style/CustomChipChoice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="BURGER"
+            android:textSize="12sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipChinese"
+            style="@style/CustomChipChoice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="CHINESE"
+            android:textSize="12sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPizza"
+            style="@style/CustomChipChoice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="PIZZA"
+            android:textSize="12sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSalad"
+            style="@style/CustomChipChoice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="SALADS"
+            android:textSize="12sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSoup"
+            style="@style/CustomChipChoice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="SOUPS"
+            android:textSize="12sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBF"
+            style="@style/CustomChipChoice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="BREAKFAST"
+            android:textSize="12sp" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+    <TextView
+        android:id="@+id/tvDietary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/yugothib"
+        android:text="DIETARY"
+        android:textSize="@dimen/t16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipCategories" />
+
+    <TextView
+        android:id="@+id/tvClearAllDietary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:background="@color/trans"
+        android:text="@string/clear_all"
+        android:textSize="12sp"
+        android:fontFamily="@font/yugothib"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDietary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvDietary" />
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipDietary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDietary">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipAny"
+            style="@style/CustomChipChoice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:paddingHorizontal="20dp"
+            android:text="ANY"
+            android:textSize="12sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipVeg"
+            style="@style/CustomChipChoice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="VEGETARIAN"
+            android:textSize="12sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipVegan"
+            style="@style/CustomChipChoice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="VEGAN"
+            android:textSize="12sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipGluten"
+            style="@style/CustomChipChoice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="GLUTEN-FREE"
+            android:textSize="12sp" />
+
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+    <TextView
+        android:id="@+id/tvPriceRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/yugothib"
+        android:text="PRICE RANGE"
+        android:textSize="@dimen/t16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipDietary" />
+
+    <TextView
+        android:id="@+id/tvClearAllPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:background="@color/trans"
+        android:fontFamily="@font/yugothib"
+        android:text="@string/clear_all"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPriceRange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvPriceRange" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipPriceRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:foregroundGravity="top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPriceRange">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/dollar1"
+            style="@style/CustomChipChoice"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:paddingHorizontal="20dp"
+            android:text="$"
+            android:textSize="12sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/dollar2"
+            style="@style/CustomChipChoice"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="$$"
+            android:textSize="12sp"
+            tools:layout_editor_absoluteX="162dp"
+            tools:layout_editor_absoluteY="101dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/dollar3"
+            style="@style/CustomChipChoice"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="$$$"
+            android:textSize="12sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/dollar4"
+            style="@style/CustomChipChoice"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="$$$$"
+            android:textSize="12sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/dollar5"
+            style="@style/CustomChipChoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothib"
+            android:text="$$$$$"
+            android:textSize="12sp" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnApplyFilters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/intro_button_bg"
+        android:fontFamily="@font/yugothib"
+        android:gravity="center_horizontal|center_vertical"
+        android:letterSpacing=".3"
+        android:text="APPLY FILTERS"
+        android:textColor="@color/White"
+        android:textSize="@dimen/t14"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

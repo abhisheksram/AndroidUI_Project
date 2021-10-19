@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".intro_slides.IntroFragment1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/tamang_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/tamang_food"
+            app:layout_constraintEnd_toStartOf="@+id/tamang_food"
+            app:layout_constraintTop_toTopOf="@+id/tamang_food" />
+
+        <TextView
+            android:id="@+id/tamang_food"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="-20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center_horizontal|top"
+            android:text="@string/tamang_foodservice"
+            android:textColor="@color/Black"
+            android:textSize="37sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/view5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/font_awesome_5"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/all_your_fav"
+            android:textAppearance="@style/all_your_fa"
+            android:textColor="@color/intro_heading"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view5"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/yugothib"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingHorizontal="40dp"
+            android:text="@string/all_your_fav_text"
+            android:textSize="@dimen/t16"
+            android:textAppearance="@style/free_deliver_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="376.62dp"
+            android:layout_height="376.62dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/intro1_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
