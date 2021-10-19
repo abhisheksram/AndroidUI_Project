@@ -10,21 +10,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerSingle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="H,4:3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <RelativeLayout
             android:id="@+id/relativeLayoutSingleRestaurant"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
+            android:background="@color/trans"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:clickable="false"
-            android:focusable="false"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/imageBack"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
@@ -33,8 +41,8 @@
 
             <ImageView
                 android:id="@+id/imageSearch"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
@@ -44,26 +52,16 @@
 
             <ImageView
                 android:id="@+id/imageShare"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
-                android:layout_toLeftOf="@+id/imageSearch"
+                android:layout_toStartOf="@+id/imageSearch"
                 android:src="@drawable/ic_share"/>
 
         </RelativeLayout>
-
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPagerSingle"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintDimensionRatio="H,4:3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
 
 
         <LinearLayout

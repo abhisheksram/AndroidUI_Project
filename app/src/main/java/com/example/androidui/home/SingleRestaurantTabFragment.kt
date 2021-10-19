@@ -31,9 +31,11 @@ class SingleRestaurantTabFragment : Fragment(R.layout.fragment_single_restaurant
         super.onViewCreated(view, savedInstanceState)
 
         rvTabSingleRestaurant.adapter = singleRestaurantAdapter1
+        rvTabSingleRestaurant.isNestedScrollingEnabled =false
         rvTabSingleRestaurant.layoutManager = LinearLayoutManager(this.context, RecyclerView.VERTICAL,false)
 
         rvTabSingleRestaurant1.adapter = singleRestaurantAdapter2
+        rvTabSingleRestaurant1.isNestedScrollingEnabled =false
         rvTabSingleRestaurant1.layoutManager = LinearLayoutManager(this.context, RecyclerView.VERTICAL,false)
 
     }

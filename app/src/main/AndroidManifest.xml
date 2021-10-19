@@ -37,10 +37,10 @@
             android:name=".login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".bottom_navigation.BottomNavigationActivity"
+            android:name=".BottomNavigationActivity"
             android:exported="false" />
         <activity
-            android:name=".intro_slides.WelcomeActivity"
+            android:name=".welcome.WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

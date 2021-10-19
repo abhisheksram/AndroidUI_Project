@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_orders"
-        android:name="com.example.androidui.bottom_navigation.OrdersFragment"
+        android:name="com.example.androidui.orders.OrdersFragment"
         android:label="Orders"
         tools:layout="@layout/fragment_orders" >
         <action
@@ -55,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.example.androidui.bottom_navigation.ProfileFragment"
+        android:name="com.example.androidui.profile.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -102,7 +102,6 @@
     <fragment
         android:id="@+id/searchItemsFragment"
         android:name="com.example.androidui.search.SearchItemsFragment"
-        android:label=""
         tools:layout="@layout/fragment_search_items" >
         <action
             android:id="@+id/action_searchItemsFragment_to_burgersFragment"
@@ -123,7 +122,6 @@
     <fragment
         android:id="@+id/singleRestaurantFragment"
         android:name="com.example.androidui.home.SingleRestaurantFragment"
-        android:label=""
         tools:layout="@layout/fragment_single_restaurant" >
         <action
             android:id="@+id/action_singleRestaurantFragment_to_addToOrderFragment"
@@ -132,7 +130,6 @@
     <fragment
         android:id="@+id/addToOrderFragment"
         android:name="com.example.androidui.fragments.AddToOrderFragment"
-        android:label=""
         tools:layout="@layout/fragment_add_to_order" >
         <action
             android:id="@+id/action_addToOrderFragment_to_yourOrdersFragment"
@@ -150,7 +147,6 @@
     <fragment
         android:id="@+id/paymentFragment"
         android:name="com.example.androidui.fragments.PaymentFragment"
-        android:label=""
         tools:layout="@layout/fragment_payment" >
         <action
             android:id="@+id/action_paymentFragment_to_navigation_home"

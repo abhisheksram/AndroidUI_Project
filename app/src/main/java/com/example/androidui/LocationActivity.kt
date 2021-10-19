@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
-import android.location.Address
 import android.location.Geocoder
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -14,10 +13,6 @@ import android.provider.Settings
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import com.example.androidui.home.HomeFragment
-import com.example.androidui.bottom_navigation.BottomNavigationActivity
 import com.example.androidui.common.Constants
 import com.example.androidui.util.showToast
 import com.google.android.gms.common.api.Status
@@ -28,8 +23,6 @@ import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
 import kotlinx.android.synthetic.main.activity_location.*
-import kotlinx.android.synthetic.main.fragment_intro2.*
-import java.io.IOException
 import java.util.*
 
 
@@ -39,7 +32,6 @@ class LocationActivity : AppCompatActivity() {
     private lateinit var myAddress: String
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
-    val prefLocation = "Location"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -205,38 +197,5 @@ class LocationActivity : AppCompatActivity() {
             }
         }
     }
-/*
-    fun searchLocation(){
-    searchLocation.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-        override fun onQueryTextSubmit(query: String?): Boolean {
 
-            val location: String = searchLocation.query.toString()
-
-            var addressList: List<Address>? = null
-
-            if (location != null || location == "") {
-
-                val geocoder = Geocoder(this@LocationActivity)
-                try {
-
-                    addressList = geocoder.getFromLocationName(location, 1)
-                } catch (e: IOException) {
-                    e.printStackTrace()
-                }
-
-                val address: Address = addressList!![0]
-
-                showToast(address.getAddressLine(0).toString())
-
-            }
-            return false
-        }
-
-        override fun onQueryTextChange(newText: String?): Boolean {
-            return false
-        }
-    })
-    }
-
- */
 }
