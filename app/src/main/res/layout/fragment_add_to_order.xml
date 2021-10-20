@@ -73,16 +73,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAddToOrderDetails" />
 
-    <ImageView
+    <TextView
         android:id="@+id/imageView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
+        android:text="@string/required"
+        android:background="@drawable/ic_required"
+        android:gravity="center"
+        android:textColor="@color/Orange"
+        android:textStyle="bold"
+        android:fontFamily="@font/yugothib"
         app:layout_constraintBottom_toBottomOf="@+id/textView13"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView13"
-        app:srcCompat="@drawable/ic_required"
-        tools:ignore="ContentDescription" />
+        app:layout_constraintTop_toTopOf="@+id/textView13" />
 
     <TextView
         android:id="@+id/textView14"
@@ -96,17 +100,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroupTop" />
 
-    <ImageView
+    <TextView
         android:id="@+id/imageView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
+        android:background="@drawable/ic_required"
+        android:fontFamily="@font/yugothib"
+        android:gravity="center"
+        android:text="@string/required"
+        android:textColor="@color/Orange"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView14"
-        app:srcCompat="@drawable/ic_required"
-        tools:ignore="ContentDescription" />
+        app:layout_constraintTop_toTopOf="@+id/textView14" />
 
     <RadioGroup
         android:id="@+id/radioGroupTop"
@@ -191,7 +198,7 @@
 
         <RadioButton
             android:id="@+id/rb8"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
             android:text="@string/white_chocolate_macadamia"
@@ -322,10 +329,8 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_height="50dp"
+        android:layout_margin="40dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -333,25 +338,27 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnAddToOrderMinus"
-            android:layout_width="59dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/my_image_border"
             android:text="@string/minus"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/tvAddToOrderCount"
-            android:layout_width="69dp"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:gravity="center"
             android:text="@string/_01"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnAddtoOrderPlus"
-            android:layout_width="58dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/my_image_border"
             android:text="@string/plus"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
 
     </LinearLayout>
@@ -362,7 +369,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
         android:background="@drawable/intro_button_bg"

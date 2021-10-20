@@ -1,37 +1,31 @@
 package com.example.androidui
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import com.example.androidui.common.Constants
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_bottom_navigation.*
+import kotlinx.android.synthetic.main.activity_your_orders.*
 
-
-class BottomNavigationActivity: AppCompatActivity() {
+class YourOrdersActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bottom_navigation)
+        setContentView(R.layout.activity_your_orders)
 
-        val btmNavView = findViewById<BottomNavigationView>(com.example.androidui.R.id.btmNavView)
-
-        val navHost = supportFragmentManager.findFragmentById(R.id.navHostBottomNav) as NavHostFragment
-        btmNavView.setupWithNavController(navHost.findNavController())
+        val navHost = supportFragmentManager.findFragmentById(R.id.navHostYourOrders) as NavHostFragment
+        navHost.findNavController().setGraph(R.navigation.nav_your_orders)
         navController = navHost.navController
 
-        setSupportActionBar(bottomToolbar)
+        setSupportActionBar(yourOrdersToolbar)
         setupActionBarWithNavController(navController)
     }
 
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp()  || super.onSupportNavigateUp()
     }
-
 }

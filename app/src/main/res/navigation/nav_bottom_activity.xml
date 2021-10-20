@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_bottom_activity"
+    app:startDestination="@id/navigation_home2">
+
+    <fragment
+        android:id="@+id/navigation_home2"
+        android:name="com.example.androidui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home2_to_filterFragment2"
+            app:destination="@id/filterFragment2" />
+        <action
+            android:id="@+id/action_navigation_home2_to_allRestaurantFragment2"
+            app:destination="@id/allRestaurantFragment2" />
+        <action
+            android:id="@+id/action_navigation_home2_to_featuredPartnersFragment2"
+            app:destination="@id/featuredPartnersFragment2" />
+        <action
+            android:id="@+id/action_navigation_home2_to_topRestaurantFragment2"
+            app:destination="@id/topRestaurantFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_search2"
+        android:name="com.example.androidui.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_navigation_search2_to_searchItemsFragment2"
+            app:destination="@id/searchItemsFragment2" />
+        <action
+            android:id="@+id/action_navigation_search2_to_categoriesFragment2"
+            app:destination="@id/categoriesFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_orders2"
+        android:name="com.example.androidui.orders.OrdersFragment"
+        android:label="Orders"
+        tools:layout="@layout/fragment_orders" />
+    <fragment
+        android:id="@+id/navigation_profile2"
+        android:name="com.example.androidui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/categoriesFragment2"
+        android:name="com.example.androidui.search.CategoriesFragment"
+        android:label="Categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_categoriesFragment2_to_navigation_search2"
+            app:destination="@id/navigation_search2" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchItemsFragment2"
+        android:name="com.example.androidui.search.SearchItemsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_search_items" >
+        <action
+            android:id="@+id/action_searchItemsFragment2_to_burgersFragment2"
+            app:destination="@id/burgersFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/burgersFragment2"
+        android:name="com.example.androidui.search.BurgersFragment"
+        android:label="Burgers"
+        tools:layout="@layout/fragment_burgers" >
+        <action
+            android:id="@+id/action_burgersFragment2_to_searchItemsFragment2"
+            app:destination="@id/searchItemsFragment2" />
+        <action
+            android:id="@+id/action_burgersFragment2_to_navigation_search2"
+            app:destination="@id/navigation_search2" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterFragment2"
+        android:name="com.example.androidui.fragments.FilterFragment"
+        android:label="Filter"
+        tools:layout="@layout/fragment_filter" >
+        <action
+            android:id="@+id/action_filterFragment2_to_navigation_home2"
+            app:destination="@id/navigation_home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/allRestaurantFragment2"
+        android:name="com.example.androidui.home.AllRestaurantFragment"
+        android:label="All Restaurants"
+        tools:layout="@layout/fragment_all_restaurant" />
+    <fragment
+        android:id="@+id/featuredPartnersFragment2"
+        android:name="com.example.androidui.home.FeaturedPartnersFragment"
+        android:label="Featured Partners"
+        tools:layout="@layout/fragment_featured_partners" />
+    <fragment
+        android:id="@+id/topRestaurantFragment2"
+        android:name="com.example.androidui.home.TopRestaurantFragment"
+        android:label="Top Restaurants"
+        tools:layout="@layout/fragment_top_restaurant" />
+</navigation>

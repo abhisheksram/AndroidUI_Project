@@ -3,6 +3,7 @@ package com.example.androidui.search
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.view.WindowManager
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
@@ -12,6 +13,7 @@ import com.example.androidui.data.TopRestaurants
 import kotlinx.android.synthetic.main.fragment_search.*
 
 class SearchFragment : Fragment(R.layout.fragment_search) {
+
 
     private var topRestaurantAdapter = TopRestaurantAdapter(
         listOf(
@@ -34,6 +36,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         activity?.actionBar?.hide()
+        requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
         val gridLayoutManager = GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false)
         rvSearchTopRestaurants.adapter = topRestaurantAdapter
@@ -41,15 +44,14 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
 
         tvTopCategory.setOnClickListener {
-
             val navController: NavController = Navigation.findNavController(view)
-            navController.navigate(R.id.action_navigation_search_to_categoriesFragment)
+            navController.navigate(R.id.action_navigation_search2_to_categoriesFragment2)
 
         }
 
         tvSearchView.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
-            navController.navigate(R.id.action_navigation_search_to_searchItemsFragment)
+            navController.navigate(R.id.action_navigation_search2_to_searchItemsFragment2)
 
         }
     }

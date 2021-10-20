@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_your_orders"
+    app:startDestination="@id/yourOrdersFragment2">
+
+    <fragment
+        android:id="@+id/yourOrdersFragment2"
+        android:name="com.example.androidui.fragments.YourOrdersFragment"
+        android:label="Your Orders"
+        tools:layout="@layout/fragment_your_orders" >
+        <action
+            android:id="@+id/action_yourOrdersFragment2_to_paymentFragment2"
+            app:destination="@id/paymentFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment2"
+        android:name="com.example.androidui.fragments.PaymentFragment"
+        android:label=""
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_paymentFragment2_to_bottomNavigationActivity"
+            app:destination="@id/bottomNavigationActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/bottomNavigationActivity"
+        android:name="com.example.androidui.BottomNavigationActivity"
+        android:label="" />
+</navigation>

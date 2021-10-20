@@ -19,7 +19,7 @@ class HomeViewPagerAdapter(private val images : List<ImageList>) : RecyclerView.
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeVH {
-        return HomeVH(LayoutInflater.from(parent.context).inflate(R.layout.item_home_viewpager1,parent,false))
+        return HomeVH(LayoutInflater.from(parent.context).inflate(R.layout.item_home_viewpager,parent,false))
     }
 
     override fun onBindViewHolder(holder: HomeVH, position: Int) {

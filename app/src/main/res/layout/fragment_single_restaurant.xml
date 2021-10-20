@@ -22,8 +22,8 @@
         <RelativeLayout
             android:id="@+id/relativeLayoutSingleRestaurant"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="50dp"
             android:background="@color/trans"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,35 +31,31 @@
 
             <ImageView
                 android:id="@+id/imageBack"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="20dp"
-                android:src="@drawable/ic_back"/>
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_back"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/imageSearch"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="20dp"
-                android:src="@drawable/ic_search_white"/>
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/ic_search_white"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/imageShare"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="20dp"
                 android:layout_toStartOf="@+id/imageSearch"
-                android:src="@drawable/ic_share"/>
+                android:src="@drawable/ic_share"
+                tools:ignore="ContentDescription" />
 
         </RelativeLayout>
 
@@ -84,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:text="Mayfield Bakery &amp; Cafe"
+            android:text="@string/mayfield_bakery_amp_cafe"
             android:textColor="@color/Black"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -96,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:text="$$   -   Chinese   -   American   -   Deshi Food"
+            android:text="@string/chinese_american_deshi_food"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvSingleRestaurantName" />
@@ -108,17 +104,18 @@
             android:layout_height="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:text="4.3"
+            android:text="@string/_4_3"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvSingleRestaurantDetail" />
+            app:layout_constraintTop_toBottomOf="@+id/tvSingleRestaurantDetail"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="200+ Ratings"
+            android:text="@string/_200_ratings"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView3"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
@@ -132,7 +129,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/textView8"
             app:layout_constraintStart_toEndOf="@+id/textView8"
             app:layout_constraintTop_toTopOf="@+id/textView8"
-            app:srcCompat="@drawable/ic_star_all_restaurants" />
+            app:srcCompat="@drawable/ic_star_all_restaurants"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
 
         <ImageView
             android:id="@+id/imageView12"
@@ -142,7 +140,8 @@
             android:layout_marginTop="20dp"
             android:src="@drawable/ic_free_delivery"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
 
         <ImageView
             android:id="@+id/imageView13"
@@ -152,7 +151,8 @@
             android:src="@drawable/ic_delivery_time"
             app:layout_constraintBottom_toBottomOf="@+id/imageView12"
             app:layout_constraintStart_toEndOf="@+id/imageView12"
-            app:layout_constraintTop_toTopOf="@+id/imageView12" />
+            app:layout_constraintTop_toTopOf="@+id/imageView12"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
 
         <ImageView
             android:id="@+id/btnTakeAway"
@@ -162,7 +162,8 @@
             android:src="@drawable/take_away"
             app:layout_constraintBottom_toBottomOf="@+id/imageView13"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView13" />
+            app:layout_constraintTop_toTopOf="@+id/imageView13"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
 
         <TextView
             android:id="@+id/textView18"
@@ -170,7 +171,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:text="Featured Items"
+            android:text="@string/featured_items"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView12" />

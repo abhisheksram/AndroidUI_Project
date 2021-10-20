@@ -1,5 +1,8 @@
 package com.example.androidui.adapters
 
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,11 +13,15 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.R
+import com.example.androidui.RestaurantActivity
 import com.example.androidui.common.Constants
 import com.example.androidui.data.AllRestaurants
 
 class HomeRestaurantsAdapter (private val allRestaurants:  List<AllRestaurants>) :
     RecyclerView.Adapter<HomeRestaurantsAdapter.RestaurantsVH>() {
+
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var editor: SharedPreferences.Editor
 
     inner class RestaurantsVH(view: View) : RecyclerView.ViewHolder(view) {
 
@@ -25,12 +32,18 @@ class HomeRestaurantsAdapter (private val allRestaurants:  List<AllRestaurants>)
             with(view){
                 view.setOnClickListener {
 
-                    val bundle = Bundle()
-                    bundle.putInt(Constants.Prefs.image, allRestaurants[adapterPosition].allRestaurantsImage)
-                    bundle.putString(Constants.Prefs.title,allRestaurants[adapterPosition].allRestaurantsName)
+                    sharedPreferences =
+                        this.context.getSharedPreferences(Constants.Prefs.image, Context.MODE_PRIVATE)
 
-                    val navController: NavController = Navigation.findNavController(view)
-                    navController.navigate(R.id.action_navigation_home_to_singleRestaurantFragment, bundle)
+                    editor = sharedPreferences.edit()
+
+                    editor.apply{
+                        putInt("image", allRestaurants[adapterPosition].allRestaurantsImage)
+                        putString("title", allRestaurants[adapterPosition].allRestaurantsName)
+                    }.apply()
+
+                    val intent = Intent(this.context, RestaurantActivity::class.java)
+                    this.context.startActivity(intent)
                 }
             }
         }

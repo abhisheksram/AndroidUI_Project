@@ -44,6 +44,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
     implementation 'com.hbb20:ccp:2.2.2'                        // phone number validator
 
+
     implementation platform('com.google.firebase:firebase-bom:28.4.2')
     implementation 'com.google.firebase:firebase-analytics:19.0.2'
     implementation 'com.google.firebase:firebase-messaging:22.0.0'
@@ -71,6 +72,7 @@ dependencies {
 
     //viewpager 2
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
 }
 
 apply plugin: 'com.android.application'

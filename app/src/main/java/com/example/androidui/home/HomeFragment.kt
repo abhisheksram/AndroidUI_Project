@@ -16,6 +16,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.example.androidui.BottomNavigationActivity
 import com.example.androidui.R
 import com.example.androidui.adapters.BestRestaurantsAdapter
 import com.example.androidui.adapters.HomeRestaurantsAdapter
@@ -23,10 +24,14 @@ import com.example.androidui.adapters.HomeViewPagerAdapter
 import com.example.androidui.adapters.PartnersAdapter
 import com.example.androidui.common.Constants
 import com.example.androidui.data.*
+import com.example.androidui.util.hide
+import com.example.androidui.util.show
+import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
+
 
     private var pagerAdapter = HomeViewPagerAdapter(
         listOf(
@@ -35,23 +40,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             ImageList(R.mipmap.home_image1),
             ImageList(R.mipmap.home_image1),
             ImageList(R.mipmap.home_image1)
-        )
-    )
-
-    private var bestRestaurantsAdapter = BestRestaurantsAdapter(
-        listOf(
-            BestRestaurants(
-                R.mipmap.best_retaurants1, "McDonald’s",
-                "Hay street , Perth City"),
-            BestRestaurants(
-                R.mipmap.best_retaurants2, "The Halal Guys",
-                "Hay street , Perth City"),
-            BestRestaurants(
-                R.mipmap.best_retaurants1, "McDonald’s",
-                "Hay street , Perth City"),
-            BestRestaurants(
-                R.mipmap.best_retaurants2, "The Halal Guys",
-                "Hay street , Perth City")
         )
     )
 
@@ -68,9 +56,39 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 "St Georgece Terrace, Perth"),
             BestPartners(
                 R.mipmap.bestpartner2, "Mario Italiano",
+                "Hay street , Perth City"),
+            BestPartners(
+                R.mipmap.bestpartner1, "Krispy Creme",
+                "St Georgece Terrace, Perth"),
+            BestPartners(
+                R.mipmap.bestpartner2, "Mario Italiano",
                 "Hay street , Perth City")
         )
     )
+
+    private var bestRestaurantsAdapter = BestRestaurantsAdapter(
+        listOf(
+            BestRestaurants(
+                R.mipmap.best_retaurants1, "McDonald’s",
+                "Hay street , Perth City"),
+            BestRestaurants(
+                R.mipmap.best_retaurants2, "The Halal Guys",
+                "Hay street , Perth City"),
+            BestRestaurants(
+                R.mipmap.best_retaurants1, "McDonald’s",
+                "Hay street , Perth City"),
+            BestRestaurants(
+                R.mipmap.best_retaurants2, "The Halal Guys",
+                "Hay street , Perth City"),
+            BestRestaurants(
+                R.mipmap.best_retaurants1, "McDonald’s",
+                "Hay street , Perth City"),
+            BestRestaurants(
+                R.mipmap.best_retaurants2, "The Halal Guys",
+                "Hay street , Perth City")
+        )
+    )
+
 
     private var allRestaurantsAdapter = HomeRestaurantsAdapter(
         listOf(
@@ -87,9 +105,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        activity?.actionBar?.hide()
-
+        requireActivity().actionBar?.hide()
         requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+        (activity as BottomNavigationActivity).bottomToolbar.show()
 
         dotsIndicator()
         viewPagerHome1.adapter = pagerAdapter
@@ -109,7 +127,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             tvDeliveryTo.text = location
         }else
         {
-            tvDeliveryTo.text = "Location"
+            tvDeliveryTo.text = R.string.location.toString()
         }
 
 
@@ -127,22 +145,22 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         tvHomeFilter.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
-            navController.navigate(R.id.action_navigation_home_to_filterFragment)
+            navController.navigate(R.id.action_navigation_home2_to_filterFragment2)
         }
 
         tvSeeAll1.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
-            navController.navigate(R.id.action_navigation_home_to_featuredPartnersFragment)
+            navController.navigate(R.id.action_navigation_home2_to_featuredPartnersFragment2)
         }
 
         tvSeeAll2.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
-            navController.navigate(R.id.action_navigation_home_to_topRestaurantFragment)
+            navController.navigate(R.id.action_navigation_home2_to_topRestaurantFragment2)
         }
 
         tvSeeAll3.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
-            navController.navigate(R.id.action_navigation_home_to_allRestaurantFragment)
+            navController.navigate(R.id.action_navigation_home2_to_allRestaurantFragment2)
         }
 
     }

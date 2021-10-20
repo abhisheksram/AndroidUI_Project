@@ -3,11 +3,13 @@ package com.example.androidui.search
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.view.WindowManager
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.androidui.R
 import com.example.androidui.adapters.FeaturedPartnerAdapter
+import com.example.androidui.common.Constants
 import com.example.androidui.data.Partners
 import kotlinx.android.synthetic.main.fragment_burgers.*
 
@@ -34,7 +36,16 @@ class BurgersFragment : Fragment(R.layout.fragment_burgers) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        tvCount.text = "We have founds ${partnerAdapter.itemCount} results for your search"
+        requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+
+        val args = this.arguments
+        val title = args?.getString(Constants.Prefs.title)
+
+        if (title == null){
+            tvCount.text = "We have founds ${partnerAdapter.itemCount} results for your search"
+        } else {
+            tvCount.text = "We have founds ${partnerAdapter.itemCount} results for $title"
+        }
 
         rvBurgers.layoutManager = StaggeredGridLayoutManager(
             2,
@@ -45,7 +56,7 @@ class BurgersFragment : Fragment(R.layout.fragment_burgers) {
 
         tvSearchAgain.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
-            navController.navigate(R.id.action_burgersFragment_to_searchItemsFragment)
+            navController.navigate(R.id.action_burgersFragment2_to_searchItemsFragment2)
 
         }
 

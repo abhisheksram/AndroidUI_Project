@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_restaurant"
+    app:startDestination="@id/singleRestaurantFragment2">
+
+    <fragment
+        android:id="@+id/singleRestaurantFragment2"
+        android:name="com.example.androidui.home.SingleRestaurantFragment"
+        tools:layout="@layout/fragment_single_restaurant" >
+        <action
+            android:id="@+id/action_singleRestaurantFragment2_to_addToOrderFragment2"
+            app:destination="@id/addToOrderFragment2" />
+        <action
+            android:id="@+id/action_singleRestaurantFragment2_to_bottomNavigationActivity2"
+            app:destination="@id/bottomNavigationActivity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/addToOrderFragment2"
+        android:name="com.example.androidui.fragments.AddToOrderFragment"
+        tools:layout="@layout/fragment_add_to_order" >
+        <action
+            android:id="@+id/action_addToOrderFragment2_to_yourOrdersActivity"
+            app:destination="@id/yourOrdersActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/yourOrdersActivity"
+        android:name="com.example.androidui.YourOrdersActivity"
+        tools:layout="@layout/activity_your_orders" />
+    <activity
+        android:id="@+id/bottomNavigationActivity2"
+        android:name="com.example.androidui.BottomNavigationActivity"
+        android:label="BottomNavigationActivity" />
+</navigation>

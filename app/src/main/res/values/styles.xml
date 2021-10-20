@@ -3,7 +3,13 @@
 
     <style name="roundedCornersImageView" >
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">20dp</item>
+        <item name="cornerSize">30dp</item>
+    </style>
+
+    <style name="my_et_border">
+        <item name="cornerFamily">rounded</item>
+        <item name="strokeColor">@color/LightGrey</item>
+        <item name="cornerSize">10dp</item>
     </style>
 
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -90,8 +96,6 @@
 
     </style>
 
-    <style name="OtpWidget"/>
-
     <style name="OtpWidget.OtpView" parent="Widget.AppCompat.EditText">
         <item name="android:background">@null</item>
         <item name="android:minHeight">0dp</item>
@@ -99,6 +103,7 @@
     </style>
 
     <style name="CustomChipChoice" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="android:scaleType">center</item>
         <item name="chipBackgroundColor">@color/background_color_chip_state_list</item>
         <item name="android:textColor">@color/text_color_chip_state_list</item>
     </style>

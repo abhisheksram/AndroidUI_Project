@@ -31,7 +31,7 @@ class SingleRestaurantAdapter(private val singleRestaurant:  List<SingleRestaura
                     bundle.putString(Constants.Prefs.title,singleRestaurant[adapterPosition].singleRestaurantName)
 
                     val navController: NavController = Navigation.findNavController(view)
-                    navController.navigate(R.id.action_singleRestaurantFragment_to_addToOrderFragment,bundle)
+                    navController.navigate(R.id.action_singleRestaurantFragment2_to_addToOrderFragment2,bundle)
                 }
             }
         }

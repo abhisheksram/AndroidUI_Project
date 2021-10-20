@@ -1,7 +1,10 @@
 package com.example.androidui.home
 
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,14 +27,20 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.CompositePageTransformer
+import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.example.androidui.R
 import com.example.androidui.common.Constants
+import kotlin.math.abs
 
 
 class SingleRestaurantFragment : Fragment() {
 
-    private lateinit var pagerAdapter : HomeViewPagerAdapter
+    private lateinit var pagerAdapter: HomeViewPagerAdapter
+    private lateinit var sliderHandler: Handler
+    private lateinit var sliderRunnable: Runnable
+    private lateinit var sharedPreferences: SharedPreferences
 
     private var itemAdapter = FeaturedItemsAdapter(
         listOf(
@@ -44,12 +53,12 @@ class SingleRestaurantFragment : Fragment() {
         )
     )
 
-    private lateinit var navController: NavController
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
 
         return inflater.inflate(R.layout.fragment_single_restaurant, container, false)
     }
@@ -57,50 +66,92 @@ class SingleRestaurantFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //(activity as BottomNavigationActivity).supportActionBar!!.hide()
+        requireActivity().window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
-        navController = Navigation.findNavController(view)
+        sharedPreferences =
+            this.requireContext().getSharedPreferences(Constants.Prefs.image, Context.MODE_PRIVATE)
 
-        val args = this.arguments
-        val title = args?.getString(Constants.Prefs.title)
-        val image = args?.getInt(Constants.Prefs.image)
+        val title = sharedPreferences.getString("title",null)
+        val image = sharedPreferences.getInt("image",R.mipmap.all_restaurants13)
 
         pagerAdapter = HomeViewPagerAdapter(
             listOf(
-                ImageList(image!!),
+                ImageList(image),
+                ImageList(image),
                 ImageList(image),
                 ImageList(image),
                 ImageList(image)
             )
         )
 
-        requireActivity().window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
-
-        requireActivity().actionBar?.hide()
-
         tvSingleRestaurantName.text = title
 
         rvSingleRestaurant.adapter = itemAdapter
-        rvSingleRestaurant.layoutManager = LinearLayoutManager(this.context, RecyclerView.HORIZONTAL,false)
+        rvSingleRestaurant.layoutManager =
+            LinearLayoutManager(this.context, RecyclerView.HORIZONTAL, false)
 
         val bundle = Bundle()
-        bundle.putInt(Constants.Prefs.image,image)
-        bundle.putString(Constants.Prefs.title,title)
+        bundle.putInt(Constants.Prefs.image, image)
+        bundle.putString(Constants.Prefs.title, title)
 
         btnTakeAway.setOnClickListener {
-            navController.navigate(R.id.action_singleRestaurantFragment_to_addToOrderFragment,bundle)
+            val singleNavController: NavController = Navigation.findNavController(view)
+            singleNavController.navigate(
+                R.id.action_singleRestaurantFragment2_to_addToOrderFragment2,
+                bundle
+            )
+        }
+
+        imageBack.setOnClickListener {
+            val singleNavController: NavController = Navigation.findNavController(view)
+            singleNavController.navigate(
+                R.id.action_singleRestaurantFragment2_to_bottomNavigationActivity2
+            )
+            requireActivity().finish()
         }
 
         viewPagerSingle.adapter = pagerAdapter
+
+        val pageTurn = CompositePageTransformer()
+        pageTurn.addTransformer(MarginPageTransformer(40))
+        pageTurn.addTransformer { page, position ->
+            val r: Float = 1 - abs(position)
+            page.scaleY = 0.85f + r * 0.15f
+        }
+
+        viewPagerSingle.setPageTransformer(pageTurn)
+        sliderHandler = Handler()
+        sliderRunnable = Runnable {
+
+            if (viewPagerSingle.currentItem == pagerAdapter.itemCount) {
+                viewPagerSingle.currentItem = 0
+            } else {
+                viewPagerSingle.currentItem = viewPagerSingle.currentItem + 1
+            }
+        }
+
         dotsIndicator()
+
         viewPagerSingle.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            private var currentPage: Int = 0
+
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 setDots(position)
+                currentPage = position
+                sliderHandler.removeCallbacks(sliderRunnable)
+                sliderHandler.postDelayed(sliderRunnable, 2000)
+
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {
+                if (state == 1 && currentPage == pagerAdapter.itemCount - 1) {
+                    currentPage = 0
+                    viewPagerSingle.currentItem = currentPage
+                }
+
             }
         })
-
-        relativeLayoutSingleRestaurant.visibility = View.VISIBLE
 
         val tabAdapter = TabAdapter(requireActivity().supportFragmentManager, lifecycle)
         viewPagerTab.adapter = tabAdapter
@@ -120,6 +171,40 @@ class SingleRestaurantFragment : Fragment() {
             }
         }.attach()
 
+
+        viewPagerTab.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            private var currentPage: Int = 0
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {
+                currentPage = position
+            }
+
+
+            override fun onPageScrollStateChanged(state: Int) {
+                if (state == 1 && currentPage == 4) {
+
+                    currentPage = 0
+
+                    viewPagerTab.currentItem = currentPage
+
+                }
+
+            }
+        })
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        sliderHandler.removeCallbacks(sliderRunnable)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        sliderHandler.postDelayed(sliderRunnable, 2000)
     }
 
     inner class TabAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
@@ -131,7 +216,7 @@ class SingleRestaurantFragment : Fragment() {
         }
 
         override fun createFragment(position: Int): Fragment {
-            return  SingleRestaurantTabFragment()
+            return SingleRestaurantTabFragment()
         }
     }
 
@@ -177,5 +262,6 @@ class SingleRestaurantFragment : Fragment() {
             )
         }
     }
+
 
 }

@@ -14,11 +14,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageBurgers"
             android:layout_width="160dp"
             android:layout_height="280dp"
-            android:scaleType="fitCenter"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedCornersImageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -31,7 +32,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/yugothib"
-            android:text="4.5"
+            android:text="@string/_4_5"
             android:textColor="@color/White"
             app:chipBackgroundColor="#EEA734"
             app:layout_constraintBottom_toBottomOf="@+id/imageBurgers"
@@ -45,7 +46,8 @@
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toTopOf="@+id/imageView5"
             app:layout_constraintStart_toStartOf="@+id/imageBurgers"
-            app:srcCompat="@drawable/ic_fast_clock" />
+            app:srcCompat="@drawable/ic_fast_clock"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/tvRVPartnersTime"
@@ -53,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:fontFamily="@font/yugothib"
-            android:text="25min"
+            android:text="@string/_25_min"
             android:textColor="@color/White"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintStart_toEndOf="@+id/imageView4"
@@ -67,7 +69,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageBurgers"
             app:layout_constraintEnd_toEndOf="@+id/imageView4"
             app:layout_constraintStart_toStartOf="@+id/imageView4"
-            app:srcCompat="@drawable/ic_dollar" />
+            app:srcCompat="@drawable/ic_dollar"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/tvRVPartnersCost"
@@ -75,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:fontFamily="@font/yugothib"
-            android:text="Free"
+            android:text="@string/free"
             android:textColor="@color/White"
             app:layout_constraintBottom_toBottomOf="@+id/imageView5"
             app:layout_constraintStart_toEndOf="@+id/imageView5"
@@ -95,7 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/yugothib"
-            android:text="Chinese"
+            android:text="@string/chinese"
             app:layout_constraintStart_toStartOf="@+id/tvBurgerName"
             app:layout_constraintTop_toBottomOf="@+id/tvBurgerName" />
 
@@ -107,7 +110,8 @@
             android:src="@drawable/indicator1"
             app:layout_constraintBottom_toBottomOf="@+id/tvRVPartnerCountry1"
             app:layout_constraintStart_toEndOf="@+id/tvRVPartnerCountry1"
-            app:layout_constraintTop_toTopOf="@+id/tvRVPartnerCountry1" />
+            app:layout_constraintTop_toTopOf="@+id/tvRVPartnerCountry1"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/tvRVPartnerCountry"
@@ -115,7 +119,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:fontFamily="@font/yugothib"
-            android:text="American"
+            android:text="@string/american"
             app:layout_constraintStart_toEndOf="@+id/textView12"
             app:layout_constraintTop_toTopOf="@+id/tvRVPartnerCountry1" />
 

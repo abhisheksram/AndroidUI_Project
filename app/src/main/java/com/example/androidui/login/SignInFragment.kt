@@ -66,7 +66,6 @@ class SignInFragment : Fragment(R.layout.fragment_signin) {
                     val navController: NavController = Navigation.findNavController(view)
                     navController.navigate(R.id.action_signInFragment2_to_locationActivity)
 
-
                     (requireActivity() as LoginActivity).finish()
 
                 }

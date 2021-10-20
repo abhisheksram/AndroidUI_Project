@@ -126,6 +126,9 @@
         <action
             android:id="@+id/action_singleRestaurantFragment_to_addToOrderFragment"
             app:destination="@id/addToOrderFragment"/>
+        <action
+            android:id="@+id/action_singleRestaurantFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
     <fragment
         android:id="@+id/addToOrderFragment"

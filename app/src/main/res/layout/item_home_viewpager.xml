@@ -6,9 +6,9 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageViewHomeViewPager"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:shapeAppearanceOverlay="@style/roundedCornersImageView"
+        app:layout_constraintDimensionRatio="H,4:3"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

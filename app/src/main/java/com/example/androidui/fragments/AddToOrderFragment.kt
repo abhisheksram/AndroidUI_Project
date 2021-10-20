@@ -4,11 +4,16 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.view.WindowManager
+import androidx.core.view.isGone
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.example.androidui.BottomNavigationActivity
 import com.example.androidui.R
 import com.example.androidui.common.Constants
+import com.example.androidui.util.gone
+import com.example.androidui.util.hide
 import com.example.androidui.util.showToast
+import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 import kotlinx.android.synthetic.main.fragment_add_to_order.*
 
 
@@ -19,7 +24,6 @@ class AddToOrderFragment : Fragment(R.layout.fragment_add_to_order) {
 
         requireActivity().window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
-
         val args = this.arguments
         val title = args?.getString(Constants.Prefs.title)
         val image = args?.getInt(Constants.Prefs.image)
@@ -29,9 +33,8 @@ class AddToOrderFragment : Fragment(R.layout.fragment_add_to_order) {
 
 
         btnAddToOrder.setOnClickListener {
-            requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
-            val navController: NavController = Navigation.findNavController(view)
-            navController.navigate(R.id.action_addToOrderFragment_to_yourOrdersFragment)
+            val singleNavController: NavController = Navigation.findNavController(view)
+            singleNavController.navigate(R.id.action_addToOrderFragment2_to_yourOrdersActivity)
         }
 
         btnAddSpecialInstructions.setOnClickListener {

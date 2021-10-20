@@ -19,7 +19,7 @@
             android:id="@+id/imagePartners"
             android:layout_width="160dp"
             android:layout_height="280dp"
-            android:scaleType="fitCenter"
+            android:scaleType="centerCrop"
             app:shapeAppearanceOverlay="@style/roundedCornersImageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

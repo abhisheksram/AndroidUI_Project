@@ -7,10 +7,13 @@ import android.view.WindowManager
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.androidui.BottomNavigationActivity
 import com.example.androidui.R
 import com.example.androidui.adapters.YourOrderAdapter
 import com.example.androidui.data.Orders
+import com.example.androidui.util.show
 import com.example.androidui.util.showToast
+import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 import kotlinx.android.synthetic.main.fragment_your_orders.*
 
 
@@ -30,14 +33,13 @@ class YourOrdersFragment : Fragment(R.layout.fragment_your_orders) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
-
         rvYourOrders.adapter = ordersAdapter
+        rvYourOrders.isNestedScrollingEnabled = false
         rvYourOrders.layoutManager = LinearLayoutManager(this.context,LinearLayoutManager.VERTICAL,false)
 
         btnConfirmOrder.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
-            navController.navigate(R.id.action_yourOrdersFragment_to_paymentFragment)
+            navController.navigate(R.id.action_yourOrdersFragment2_to_paymentFragment2)
         }
 
         btnPromoCode.setOnClickListener {
