@@ -46,7 +46,7 @@ class SingleRestaurantAdapter(private val singleRestaurant:  List<SingleRestaura
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantsVH {
-        return RestaurantsVH(LayoutInflater.from(parent.context).inflate(R.layout.item_single_tab_fragments,parent,false))
+        return RestaurantsVH(LayoutInflater.from(parent.context).inflate(R.layout.item_single_tab_fragment,parent,false))
     }
 
     override fun onBindViewHolder(holder: RestaurantsVH, position: Int) {

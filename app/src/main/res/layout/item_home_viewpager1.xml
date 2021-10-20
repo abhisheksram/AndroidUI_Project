@@ -4,11 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageViewHomeViewPager"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/bitmap_bg"
+        app:shapeAppearanceOverlay="@style/roundedCornersImageView"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/image_RV_home_best_restaurants"
         android:layout_width="350dp"
         android:layout_height="250dp"
@@ -13,7 +13,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:scaleType="fitCenter"
-        android:background="@drawable/bitmap_bg"
+        app:shapeAppearanceOverlay="@style/roundedCornersImageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,7 +26,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/yugothib"
-        android:text="Name"
+        android:text="@string/name"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_RV_home_best_restaurants" />
@@ -38,7 +38,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/yugothib"
-        android:text="Location"
+        android:text="@string/location"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_RV_home_best_restaurantsName" />
@@ -50,7 +50,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/yugothib"
-        android:text="4.5"
+        android:text="@string/_4_5"
         android:textColor="@color/White"
         app:chipBackgroundColor="#EEA734"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:fontFamily="@font/yugothib"
-        android:text="25 min"
+        android:text="@string/_25_min"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/chipRating1"
         app:layout_constraintStart_toEndOf="@+id/chipRating1"
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:fontFamily="@font/yugothib"
-        android:text="Free Delivery"
+        android:text="@string/free_deliver"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/chipRating1"
         app:layout_constraintStart_toEndOf="@+id/tv_RV_home_items3"
@@ -87,7 +87,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="-10dp"
         android:fontFamily="@font/yugothib"
-        android:text="."
+        android:text="@string/dot"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/tv_RV_home_items1"

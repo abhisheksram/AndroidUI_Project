@@ -15,11 +15,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageFeaturedItems"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:scaleType="fitCenter"
+            app:shapeAppearanceOverlay="@style/roundedCornersImageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -39,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/yugothib"
-            android:text="Chinese"
+            android:text="@string/chinese"
             app:layout_constraintStart_toStartOf="@+id/tvFeaturedItemsName"
             app:layout_constraintTop_toBottomOf="@+id/tvFeaturedItemsName" />
 
@@ -51,7 +52,8 @@
             android:src="@drawable/indicator1"
             app:layout_constraintBottom_toBottomOf="@+id/tvRVPartnerCountry1"
             app:layout_constraintStart_toEndOf="@+id/tvRVPartnerCountry1"
-            app:layout_constraintTop_toTopOf="@+id/tvRVPartnerCountry1" />
+            app:layout_constraintTop_toTopOf="@+id/tvRVPartnerCountry1"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/tvRVPartnerCountry"
@@ -59,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:fontFamily="@font/yugothib"
-            android:text="American"
+            android:text="@string/american"
             app:layout_constraintStart_toEndOf="@+id/textView12"
             app:layout_constraintTop_toTopOf="@+id/tvRVPartnerCountry1" />
 
