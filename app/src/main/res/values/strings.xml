@@ -90,7 +90,8 @@
     <string name="all">ALL</string>
     <string name="brunch">BRUNCH</string>
     <string name="dinner">DINNER</string>
-    <string name="chinese">CHINESE</string>
+    <string name="chineseCap">CHINESE</string>
+    <string name="chinese">Chinese</string>
     <string name="pizza">PIZZA</string>
     <string name="salads">SALADS</string>
     <string name="soups">SOUPS</string>

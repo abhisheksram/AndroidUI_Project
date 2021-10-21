@@ -88,7 +88,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothib"
-            android:text="@string/chinese"
+            android:text="@string/chineseCap"
             android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip

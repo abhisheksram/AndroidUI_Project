@@ -119,7 +119,7 @@ class LocationActivity : AppCompatActivity() {
 
                 } else{ //showToast("Could not get the Location")
                     val addresses = Geocoder(this, Locale.getDefault()).getFromLocation(
-                        12.9716, 77.5946,
+                        12.9456, 77.5219,
                         5
                     )
                     myAddress = addresses[0].getAddressLine(0)

@@ -59,6 +59,7 @@
             app:layout_constraintDimensionRatio="H,5:3"
             android:layout_margin="20dp"
             android:src="@drawable/ic_home_banner"
+            android:elevation="@dimen/d10"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rvHome1"

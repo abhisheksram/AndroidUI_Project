@@ -90,9 +90,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             AllRestaurants(R.mipmap.all_restaurants11, "McDonald's"),
             AllRestaurants(R.mipmap.all_restaurants12, "Cafe Brichor’s"),
             AllRestaurants(R.mipmap.all_restaurants13, "Mayfield Bakery & Cafe"),
-            AllRestaurants(R.mipmap.all_restaurants11, "McDonald's"),
-            AllRestaurants(R.mipmap.all_restaurants12, "Cafe Brichor’s"),
-            AllRestaurants(R.mipmap.all_restaurants13, "Mayfield Bakery & Cafe")
         )
     )
 
