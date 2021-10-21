@@ -1,4 +1,4 @@
-package com.example.androidui
+package com.example.androidui.your_orders
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,7 +6,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
-import kotlinx.android.synthetic.main.activity_bottom_navigation.*
+import com.example.androidui.R
 import kotlinx.android.synthetic.main.activity_your_orders.*
 
 class YourOrdersActivity : AppCompatActivity() {

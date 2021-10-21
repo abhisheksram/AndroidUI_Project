@@ -10,8 +10,8 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.R
 import com.example.androidui.common.Constants
-
 import com.example.androidui.data.SearchList
+
 
 class SearchAdapter (private val search : List<SearchList>) : RecyclerView.Adapter<SearchAdapter.SearchVH>() {
 
@@ -25,9 +25,9 @@ class SearchAdapter (private val search : List<SearchList>) : RecyclerView.Adapt
 
                     val bundle = Bundle()
                     bundle.putString(Constants.Prefs.title,search[adapterPosition].search)
-
                     val navController: NavController = Navigation.findNavController(view)
                     navController.navigate(R.id.action_searchItemsFragment2_to_burgersFragment2,bundle)
+
                 }
             }
 

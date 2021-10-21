@@ -12,13 +12,10 @@
         <action
             android:id="@+id/action_singleRestaurantFragment2_to_addToOrderFragment2"
             app:destination="@id/addToOrderFragment2" />
-        <action
-            android:id="@+id/action_singleRestaurantFragment2_to_bottomNavigationActivity2"
-            app:destination="@id/bottomNavigationActivity2" />
     </fragment>
     <fragment
         android:id="@+id/addToOrderFragment2"
-        android:name="com.example.androidui.fragments.AddToOrderFragment"
+        android:name="com.example.androidui.your_orders.AddToOrderFragment"
         tools:layout="@layout/fragment_add_to_order" >
         <action
             android:id="@+id/action_addToOrderFragment2_to_yourOrdersActivity"
@@ -26,10 +23,6 @@
     </fragment>
     <activity
         android:id="@+id/yourOrdersActivity"
-        android:name="com.example.androidui.YourOrdersActivity"
+        android:name="com.example.androidui.your_orders.YourOrdersActivity"
         tools:layout="@layout/activity_your_orders" />
-    <activity
-        android:id="@+id/bottomNavigationActivity2"
-        android:name="com.example.androidui.BottomNavigationActivity"
-        android:label="BottomNavigationActivity" />
 </navigation>

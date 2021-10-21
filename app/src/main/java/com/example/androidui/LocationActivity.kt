@@ -59,7 +59,6 @@ class LocationActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-
     private fun initAutoCompletePlaces() {
 
         val autocompleteFragment =
@@ -118,7 +117,7 @@ class LocationActivity : AppCompatActivity() {
                         showToast("Place Not found")
                     }
 
-                } else{ showToast("Could not get the Location")
+                } else{ //showToast("Could not get the Location")
                     val addresses = Geocoder(this, Locale.getDefault()).getFromLocation(
                         12.9456, 77.5219,
                         10
@@ -136,7 +135,6 @@ class LocationActivity : AppCompatActivity() {
             requestLocationPermission()
         }
     }
-
 
     private fun checkPermission(): Boolean {
         val result = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)

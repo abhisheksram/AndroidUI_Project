@@ -3,17 +3,14 @@ package com.example.androidui.adapters
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.R
-import com.example.androidui.RestaurantActivity
+import com.example.androidui.home.RestaurantActivity
 import com.example.androidui.common.Constants
 import com.example.androidui.data.AllRestaurants
 

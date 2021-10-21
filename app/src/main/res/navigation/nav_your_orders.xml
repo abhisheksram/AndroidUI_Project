@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/yourOrdersFragment2"
-        android:name="com.example.androidui.fragments.YourOrdersFragment"
+        android:name="com.example.androidui.your_orders.YourOrdersFragment"
         android:label="Your Orders"
         tools:layout="@layout/fragment_your_orders" >
         <action
@@ -16,12 +16,12 @@
     </fragment>
     <fragment
         android:id="@+id/paymentFragment2"
-        android:name="com.example.androidui.fragments.PaymentFragment"
+        android:name="com.example.androidui.your_orders.PaymentFragment"
         android:label=""
         tools:layout="@layout/fragment_payment" >
         <action
             android:id="@+id/action_paymentFragment2_to_bottomNavigationActivity"
-            app:destination="@id/bottomNavigationActivity" />
+            app:destination="@id/bottomNavigationActivity"/>
     </fragment>
     <activity
         android:id="@+id/bottomNavigationActivity"

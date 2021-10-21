@@ -64,7 +64,7 @@
     </fragment>
     <fragment
         android:id="@+id/filterFragment"
-        android:name="com.example.androidui.fragments.FilterFragment"
+        android:name="com.example.androidui.FilterFragment"
         android:label="Filter"
         tools:layout="@layout/fragment_filter" >
         <action
@@ -132,7 +132,7 @@
     </fragment>
     <fragment
         android:id="@+id/addToOrderFragment"
-        android:name="com.example.androidui.fragments.AddToOrderFragment"
+        android:name="com.example.androidui.your_orders.AddToOrderFragment"
         tools:layout="@layout/fragment_add_to_order" >
         <action
             android:id="@+id/action_addToOrderFragment_to_yourOrdersFragment"
@@ -140,7 +140,7 @@
     </fragment>
     <fragment
         android:id="@+id/yourOrdersFragment"
-        android:name="com.example.androidui.fragments.YourOrdersFragment"
+        android:name="com.example.androidui.your_orders.YourOrdersFragment"
         android:label="Your Orders"
         tools:layout="@layout/fragment_your_orders" >
         <action
@@ -149,7 +149,7 @@
     </fragment>
     <fragment
         android:id="@+id/paymentFragment"
-        android:name="com.example.androidui.fragments.PaymentFragment"
+        android:name="com.example.androidui.your_orders.PaymentFragment"
         tools:layout="@layout/fragment_payment" >
         <action
             android:id="@+id/action_paymentFragment_to_navigation_home"

@@ -66,8 +66,6 @@ class SingleRestaurantFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        requireActivity().window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
-
         sharedPreferences =
             this.requireContext().getSharedPreferences(Constants.Prefs.image, Context.MODE_PRIVATE)
 
@@ -103,11 +101,7 @@ class SingleRestaurantFragment : Fragment() {
         }
 
         imageBack.setOnClickListener {
-            val singleNavController: NavController = Navigation.findNavController(view)
-            singleNavController.navigate(
-                R.id.action_singleRestaurantFragment2_to_bottomNavigationActivity2
-            )
-            requireActivity().finish()
+          activity?.onBackPressed()
         }
 
         viewPagerSingle.adapter = pagerAdapter

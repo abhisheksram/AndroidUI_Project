@@ -1,19 +1,14 @@
-package com.example.androidui.fragments
+package com.example.androidui.your_orders
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.view.WindowManager
-import androidx.core.view.isGone
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.example.androidui.BottomNavigationActivity
 import com.example.androidui.R
 import com.example.androidui.common.Constants
-import com.example.androidui.util.gone
-import com.example.androidui.util.hide
 import com.example.androidui.util.showToast
-import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 import kotlinx.android.synthetic.main.fragment_add_to_order.*
 
 
@@ -22,15 +17,12 @@ class AddToOrderFragment : Fragment(R.layout.fragment_add_to_order) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        requireActivity().window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
-
         val args = this.arguments
         val title = args?.getString(Constants.Prefs.title)
         val image = args?.getInt(Constants.Prefs.image)
 
         imageAddToOrder.setImageResource(image!!)
         tvAddToOrderName.text = title
-
 
         btnAddToOrder.setOnClickListener {
             val singleNavController: NavController = Navigation.findNavController(view)

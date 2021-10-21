@@ -6,7 +6,6 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
@@ -16,7 +15,6 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.example.androidui.BottomNavigationActivity
 import com.example.androidui.R
 import com.example.androidui.adapters.BestRestaurantsAdapter
 import com.example.androidui.adapters.HomeRestaurantsAdapter
@@ -24,9 +22,6 @@ import com.example.androidui.adapters.HomeViewPagerAdapter
 import com.example.androidui.adapters.PartnersAdapter
 import com.example.androidui.common.Constants
 import com.example.androidui.data.*
-import com.example.androidui.util.hide
-import com.example.androidui.util.show
-import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
@@ -105,10 +100,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        requireActivity().actionBar?.hide()
-        requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
-        (activity as BottomNavigationActivity).bottomToolbar.show()
-
+        activity?.actionBar?.hide()
         dotsIndicator()
         viewPagerHome1.adapter = pagerAdapter
         viewPagerHome1.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
@@ -118,30 +110,14 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             }
         })
 
-        sharedPreferences =
-            this.requireContext().getSharedPreferences(Constants.Location.location, Context.MODE_PRIVATE)
+        sharedPreferences = this.requireContext().getSharedPreferences(Constants.Location.location, Context.MODE_PRIVATE)
 
         val location = sharedPreferences.getString("location",null)
 
-        if (location != null) {
-            tvDeliveryTo.text = location
-        }else
-        {
-            tvDeliveryTo.text = R.string.location.toString()
-        }
+        if (location != null) { tvDeliveryTo.text = location}
+        else { tvDeliveryTo.text = R.string.location.toString() }
 
-
-        rvHome2.adapter = bestRestaurantsAdapter
-        rvHome2.layoutManager = LinearLayoutManager(this.context,RecyclerView.HORIZONTAL,false)
-
-        rvHome1.adapter = partnersAdapter
-        rvHome1.layoutManager = LinearLayoutManager(this.context,RecyclerView.HORIZONTAL,false)
-
-        rvHome3.adapter = allRestaurantsAdapter
-        rvHome3.isNestedScrollingEnabled = false
-        rvHome3.setHasFixedSize(true)
-        rvHome3.layoutManager = LinearLayoutManager(this.context,RecyclerView.VERTICAL,false)
-
+        initRecycler()
 
         tvHomeFilter.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
@@ -163,6 +139,18 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             navController.navigate(R.id.action_navigation_home2_to_allRestaurantFragment2)
         }
 
+    }
+
+    private fun initRecycler(){
+        rvHome1.adapter = partnersAdapter
+        rvHome1.layoutManager = LinearLayoutManager(this.context,RecyclerView.HORIZONTAL,false)
+
+        rvHome2.adapter = bestRestaurantsAdapter
+        rvHome2.layoutManager = LinearLayoutManager(this.context,RecyclerView.HORIZONTAL,false)
+
+        rvHome3.adapter = allRestaurantsAdapter
+        rvHome3.isNestedScrollingEnabled = false
+        rvHome3.layoutManager = LinearLayoutManager(this.context,RecyclerView.VERTICAL,false)
     }
 
     private fun dotsIndicator() {

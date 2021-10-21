@@ -55,9 +55,7 @@ class BurgersFragment : Fragment(R.layout.fragment_burgers) {
         rvBurgers.adapter = partnerAdapter
 
         tvSearchAgain.setOnClickListener {
-            val navController: NavController = Navigation.findNavController(view)
-            navController.navigate(R.id.action_burgersFragment2_to_searchItemsFragment2)
-
+            activity?.onBackPressed()
         }
 
     }

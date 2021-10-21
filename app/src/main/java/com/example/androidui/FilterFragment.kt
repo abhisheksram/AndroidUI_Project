@@ -1,4 +1,4 @@
-package com.example.androidui.fragments
+package com.example.androidui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -28,8 +28,7 @@ class FilterFragment : Fragment(R.layout.fragment_filter) {
         btnApplyFilters.setOnClickListener {
             this.context?.showToast("Filters Applied")
 
-            val navController: NavController = Navigation.findNavController(view)
-            navController.navigate(R.id.action_filterFragment_to_navigation_home)
+            requireActivity().onBackPressed()
         }
 
     }

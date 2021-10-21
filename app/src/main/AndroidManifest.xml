@@ -16,10 +16,10 @@
         android:theme="@style/Theme.AndroidUI">
 
         <activity
-            android:name=".YourOrdersActivity"
+            android:name=".your_orders.YourOrdersActivity"
             android:exported="false" />
         <activity
-            android:name=".RestaurantActivity"
+            android:name=".home.RestaurantActivity"
             android:exported="false" />
 
         <activity

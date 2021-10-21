@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.YourOrdersFragment">
+    tools:context=".your_orders.YourOrdersFragment">
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -115,7 +115,7 @@
         android:layout_marginBottom="20dp"
         android:text="@string/add_more_items"
         android:textColor="#F8B64C"
-        android:textSize="@dimen/t16"
+        android:textSize="@dimen/t18"
         android:fontFamily="@font/yugothib"
         app:layout_constraintBottom_toTopOf="@+id/tvPromoCode"
         app:layout_constraintStart_toStartOf="parent" />
@@ -128,7 +128,7 @@
         android:layout_marginBottom="30dp"
         android:text="@string/promo_code"
         android:fontFamily="@font/yugothib"
-        android:textSize="@dimen/t16"
+        android:textSize="@dimen/t18"
         app:layout_constraintBottom_toTopOf="@+id/btnConfirmOrder"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -139,7 +139,7 @@
         android:layout_marginEnd="20dp"
         android:text="@string/forward"
         android:textColor="#F8B64C"
-        android:textSize="@dimen/t24"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvAddMoreItems"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvAddMoreItems" />
@@ -150,7 +150,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:text="@string/forward"
-        android:textSize="@dimen/t24"
+        android:textSize="30sp"
         android:textColor="@color/Black"
         app:layout_constraintBottom_toBottomOf="@+id/tvPromoCode"
         app:layout_constraintEnd_toEndOf="parent"

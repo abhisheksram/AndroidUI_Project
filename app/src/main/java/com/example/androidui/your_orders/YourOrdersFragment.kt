@@ -1,19 +1,16 @@
-package com.example.androidui.fragments
+package com.example.androidui.your_orders
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
-import android.view.WindowManager
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.androidui.BottomNavigationActivity
 import com.example.androidui.R
 import com.example.androidui.adapters.YourOrderAdapter
 import com.example.androidui.data.Orders
-import com.example.androidui.util.show
+import com.example.androidui.home.RestaurantActivity
 import com.example.androidui.util.showToast
-import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 import kotlinx.android.synthetic.main.fragment_your_orders.*
 
 
@@ -26,6 +23,8 @@ class YourOrdersFragment : Fragment(R.layout.fragment_your_orders) {
             Orders(2,"Combo Burger",
                 "Shortbread, chocolate turtle cookies, and red velvet.","AUD\$10"),
             Orders(3,"Oyster Dish",
+                "Shortbread, chocolate turtle cookies, and red velvet.","AUD\$10"),
+            Orders(4,"Oyster Dish",
                 "Shortbread, chocolate turtle cookies, and red velvet.","AUD\$10")
         )
     )
@@ -43,13 +42,20 @@ class YourOrdersFragment : Fragment(R.layout.fragment_your_orders) {
         }
 
         btnPromoCode.setOnClickListener {
-            this.context?.showToast("Currently this option is not available")
+            this.context?.showToast("No promo codes are available")
         }
 
         btnAddMoreItems.setOnClickListener {
             this.context?.showToast("Currently this option is not available")
         }
 
+        val subTotal = ordersAdapter.itemCount * 10
+        tvSubtotal.text = "AUD$$subTotal"
 
+        val delivery = 0
+        tvTotalDelivery.text = "$$delivery"
+
+        val total = subTotal + delivery
+        tvTotalOrder.text ="AUD$$total"
     }
 }

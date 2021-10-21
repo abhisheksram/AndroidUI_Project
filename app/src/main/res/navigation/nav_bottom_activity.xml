@@ -49,11 +49,7 @@
         android:id="@+id/categoriesFragment2"
         android:name="com.example.androidui.search.CategoriesFragment"
         android:label="Categories"
-        tools:layout="@layout/fragment_categories" >
-        <action
-            android:id="@+id/action_categoriesFragment2_to_navigation_search2"
-            app:destination="@id/navigation_search2" />
-    </fragment>
+        tools:layout="@layout/fragment_categories" />
     <fragment
         android:id="@+id/searchItemsFragment2"
         android:name="com.example.androidui.search.SearchItemsFragment"
@@ -67,23 +63,12 @@
         android:id="@+id/burgersFragment2"
         android:name="com.example.androidui.search.BurgersFragment"
         android:label="Burgers"
-        tools:layout="@layout/fragment_burgers" >
-        <action
-            android:id="@+id/action_burgersFragment2_to_searchItemsFragment2"
-            app:destination="@id/searchItemsFragment2" />
-        <action
-            android:id="@+id/action_burgersFragment2_to_navigation_search2"
-            app:destination="@id/navigation_search2" />
-    </fragment>
+        tools:layout="@layout/fragment_burgers" />
     <fragment
         android:id="@+id/filterFragment2"
-        android:name="com.example.androidui.fragments.FilterFragment"
+        android:name="com.example.androidui.FilterFragment"
         android:label="Filter"
-        tools:layout="@layout/fragment_filter" >
-        <action
-            android:id="@+id/action_filterFragment2_to_navigation_home2"
-            app:destination="@id/navigation_home2" />
-    </fragment>
+        tools:layout="@layout/fragment_filter" />
     <fragment
         android:id="@+id/allRestaurantFragment2"
         android:name="com.example.androidui.home.AllRestaurantFragment"
@@ -99,4 +84,5 @@
         android:name="com.example.androidui.home.TopRestaurantFragment"
         android:label="Top Restaurants"
         tools:layout="@layout/fragment_top_restaurant" />
+
 </navigation>

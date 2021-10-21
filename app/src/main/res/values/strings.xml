@@ -131,7 +131,7 @@
     <string name="_0">$0</string>
     <string name="add_more_items">Add More Items</string>
     <string name="promo_code">Promo Code</string>
-    <string name="total_incl_vat">Total(incl. VAT</string>
+    <string name="total_incl_vat">Total(incl. VAT)</string>
     <string name="_25_min">25 Min</string>
     <string name="free">Free</string>
     <string name="_4_5">4.5</string>
@@ -140,7 +140,7 @@
     <string name="free_deliver">Free Delivery</string>
     <string name="search_results">Search Results</string>
     <string name="chinesedollor">$$ - Chinese</string>
-    <string name="_10">$ 10</string>
+    <string name="_10">AUD$10</string>
     <string name="textview">TextView</string>
     <string name="required">REQUIRED</string>
 

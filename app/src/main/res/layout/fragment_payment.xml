@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.PaymentFragment">
+    tools:context=".your_orders.PaymentFragment">
 
 
     <TextView
@@ -126,14 +126,14 @@
         android:textColor="@color/White"
         android:textSize="@dimen/t14"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/scanCard"
+        app:layout_constraintBottom_toTopOf="@+id/btnScanCard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/scanCard"
+        android:id="@+id/btnScanCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
