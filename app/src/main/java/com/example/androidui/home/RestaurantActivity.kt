@@ -16,7 +16,7 @@ class RestaurantActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_restaurant)
 
-        window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+        window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         val navHost = supportFragmentManager.findFragmentById(R.id.navHostSingle) as NavHostFragment
         navHost.findNavController().setGraph(R.navigation.nav_restaurant)

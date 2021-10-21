@@ -9,13 +9,15 @@
 
     <TextView
         android:id="@+id/tvCount"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:gravity="start"
         android:textColor="@color/Black"
         android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvSearchAgain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

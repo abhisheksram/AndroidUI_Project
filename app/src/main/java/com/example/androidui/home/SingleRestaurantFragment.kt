@@ -2,9 +2,11 @@ package com.example.androidui.home
 
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -103,6 +105,16 @@ class SingleRestaurantFragment : Fragment() {
         imageBack.setOnClickListener {
           activity?.onBackPressed()
         }
+
+        imageShare.setOnClickListener {
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, "This is my text to send.")
+                type = "text/plain"
+            }
+
+            val shareIntent = Intent.createChooser(sendIntent, null)
+            startActivity(shareIntent)        }
 
         viewPagerSingle.adapter = pagerAdapter
 

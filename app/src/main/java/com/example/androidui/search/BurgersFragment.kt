@@ -11,6 +11,7 @@ import com.example.androidui.R
 import com.example.androidui.adapters.FeaturedPartnerAdapter
 import com.example.androidui.common.Constants
 import com.example.androidui.data.Partners
+import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 import kotlinx.android.synthetic.main.fragment_burgers.*
 
 
@@ -43,8 +44,10 @@ class BurgersFragment : Fragment(R.layout.fragment_burgers) {
 
         if (title == null){
             tvCount.text = "We have founds ${partnerAdapter.itemCount} results for your search"
+            //bottomToolbar.title = "Search Results"
         } else {
             tvCount.text = "We have founds ${partnerAdapter.itemCount} results for $title"
+            //bottomToolbar.title = title
         }
 
         rvBurgers.layoutManager = StaggeredGridLayoutManager(

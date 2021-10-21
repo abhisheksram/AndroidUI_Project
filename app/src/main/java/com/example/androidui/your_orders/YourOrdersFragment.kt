@@ -23,8 +23,6 @@ class YourOrdersFragment : Fragment(R.layout.fragment_your_orders) {
             Orders(2,"Combo Burger",
                 "Shortbread, chocolate turtle cookies, and red velvet.","AUD\$10"),
             Orders(3,"Oyster Dish",
-                "Shortbread, chocolate turtle cookies, and red velvet.","AUD\$10"),
-            Orders(4,"Oyster Dish",
                 "Shortbread, chocolate turtle cookies, and red velvet.","AUD\$10")
         )
     )

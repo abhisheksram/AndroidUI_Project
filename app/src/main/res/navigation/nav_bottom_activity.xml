@@ -62,7 +62,7 @@
     <fragment
         android:id="@+id/burgersFragment2"
         android:name="com.example.androidui.search.BurgersFragment"
-        android:label="Burgers"
+        android:label="@string/search_results"
         tools:layout="@layout/fragment_burgers" />
     <fragment
         android:id="@+id/filterFragment2"

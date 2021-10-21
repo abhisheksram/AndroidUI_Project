@@ -110,14 +110,14 @@
     <fragment
         android:id="@+id/burgersFragment"
         android:name="com.example.androidui.search.BurgersFragment"
-        android:label="Burgers"
-        tools:layout="@layout/fragment_burgers" >
+        android:label="@string/search_results"
+        tools:layout="@layout/fragment_burgers">
         <action
             android:id="@+id/action_burgersFragment_to_navigation_search"
             app:destination="@id/navigation_search" />
         <action
             android:id="@+id/action_burgersFragment_to_searchItemsFragment"
-            app:destination="@id/searchItemsFragment"/>
+            app:destination="@id/searchItemsFragment" />
     </fragment>
     <fragment
         android:id="@+id/singleRestaurantFragment"
