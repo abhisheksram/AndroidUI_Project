@@ -90,6 +90,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             AllRestaurants(R.mipmap.all_restaurants11, "McDonald's"),
             AllRestaurants(R.mipmap.all_restaurants12, "Cafe Brichor’s"),
             AllRestaurants(R.mipmap.all_restaurants13, "Mayfield Bakery & Cafe"),
+            AllRestaurants(R.mipmap.all_restaurants11, "McDonald's"),
+            AllRestaurants(R.mipmap.all_restaurants12, "Cafe Brichor’s"),
+            AllRestaurants(R.mipmap.all_restaurants13, "Mayfield Bakery & Cafe")
         )
     )
 
@@ -97,8 +100,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        activity?.actionBar?.hide()
+
         dotsIndicator()
+
         viewPagerHome1.adapter = pagerAdapter
         viewPagerHome1.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {

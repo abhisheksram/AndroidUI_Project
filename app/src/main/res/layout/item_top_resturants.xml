@@ -25,6 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
         android:layout_marginTop="10dp"
+        android:text="@string/textview"
+        android:textSize="@dimen/t16"
         android:fontFamily="@font/yugothib"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageRVRestaurants" />
@@ -34,7 +36,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/yugothib"
         android:text="@string/dollar2"
+        android:textSize="@dimen/t14"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tvRVRestaurantName"
         app:layout_constraintTop_toBottomOf="@+id/tvRVRestaurantName" />
@@ -57,6 +61,7 @@
         android:layout_marginStart="10dp"
         android:fontFamily="@font/yugothib"
         android:text="@string/chinese"
+        android:textSize="@dimen/t14"
         app:layout_constraintBottom_toBottomOf="@+id/tvRVRestaurantPrice"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toTopOf="@+id/tvRVRestaurantPrice" />

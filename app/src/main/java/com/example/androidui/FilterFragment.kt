@@ -26,7 +26,7 @@ class FilterFragment : Fragment(R.layout.fragment_filter) {
         }
 
         btnApplyFilters.setOnClickListener {
-            this.context?.showToast("Filters Applied")
+            this.context?.showToast("Filters are Applied")
 
             requireActivity().onBackPressed()
         }

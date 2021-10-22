@@ -22,7 +22,7 @@
             android:id="@+id/tamang_food"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="40dp"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/poppins_bold"
@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/font_awesome_5"
+            android:fontFamily="@font/awesome_5_brands"
             android:gravity="center_horizontal|center_vertical"
             android:text="@string/choose_food"
             android:textColor="@color/intro_heading"
@@ -75,19 +75,17 @@
             android:layout_height="60dp"
             android:layout_marginBottom="30dp"
             android:fontFamily="@font/yugothib"
+            android:letterSpacing="-0.03"
             android:gravity="center_horizontal|center_vertical"
             android:lineSpacingExtra="3sp"
             android:paddingHorizontal="40dp"
             android:text="@string/choose_food_text"
-            android:textAppearance="@style/free_deliver_text"
             android:textColor="@color/intro_text"
             android:textSize="@dimen/t16"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            tools:ignore="RtlSymmetry" />
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

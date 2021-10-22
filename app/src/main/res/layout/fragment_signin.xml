@@ -12,8 +12,6 @@
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
         android:fontFamily="@font/yugothib"
         android:text="@string/welcome_to_tamang_food_services"
         android:textColor="#010F07"
@@ -27,8 +25,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/yugothib"
         android:text="@string/enter_your_email_address"
         android:textColor="#868686"
@@ -41,7 +38,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,13 +60,13 @@
             android:id="@+id/etSignInEmailID"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:hint="@string/enter_email_id"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
+            android:singleLine="true"
             android:textColor="#010F07"
-            android:hint="@string/enter_email_id"
             android:textSize="@dimen/t16"
-            tools:ignore="LabelFor,RtlSymmetry"
-            android:singleLine="true" />
+            tools:ignore="LabelFor,RtlSymmetry" />
 
     </LinearLayout>
 
@@ -78,7 +75,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,13 +97,13 @@
             android:id="@+id/etSignInPW"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:hint="@string/enter_password"
             android:importantForAutofill="no"
             android:inputType="textPassword"
-            android:hint="@string/enter_password"
+            android:singleLine="true"
             android:textColor="#010F07"
             android:textSize="@dimen/t16"
-            tools:ignore="LabelFor,RtlSymmetry"
-            android:singleLine="true" />
+            tools:ignore="LabelFor,RtlSymmetry" />
 
     </LinearLayout>
 
@@ -116,7 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:background="@color/trans"
         android:fontFamily="@font/yugothib"
@@ -135,7 +132,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/intro_button_bg"
         android:fontFamily="@font/yugothib"
@@ -155,7 +152,7 @@
         android:layout_height="0dp"
         android:layout_gravity="bottom|center"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:layout_weight=".7"
         android:orientation="horizontal"
