@@ -1,5 +1,6 @@
 package com.example.androidui.your_orders
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
@@ -9,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidui.R
 import com.example.androidui.adapters.YourOrderAdapter
 import com.example.androidui.data.Orders
-import com.example.androidui.home.RestaurantActivity
 import com.example.androidui.util.showToast
 import kotlinx.android.synthetic.main.fragment_your_orders.*
 
@@ -27,6 +27,7 @@ class YourOrdersFragment : Fragment(R.layout.fragment_your_orders) {
         )
     )
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

@@ -3,7 +3,6 @@ package com.example.androidui.search
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
-import android.view.WindowManager
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager

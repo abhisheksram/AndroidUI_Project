@@ -1,9 +1,9 @@
 package com.example.androidui.your_orders
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
-import android.view.WindowManager
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.androidui.R
@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.fragment_add_to_order.*
 
 class AddToOrderFragment : Fragment(R.layout.fragment_add_to_order) {
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

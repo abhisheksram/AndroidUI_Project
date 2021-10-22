@@ -1,8 +1,6 @@
 package com.example.androidui.your_orders
 
-import android.content.ContentValues
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import androidx.fragment.app.Fragment
