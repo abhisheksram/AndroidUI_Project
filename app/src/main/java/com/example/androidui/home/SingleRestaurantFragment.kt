@@ -17,7 +17,6 @@ import com.example.androidui.adapters.HomeViewPagerAdapter
 import com.example.androidui.data.ImageList
 import com.example.androidui.data.Partners
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlinx.android.synthetic.main.fragment_single_restaurant.*
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
@@ -32,10 +31,13 @@ import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.example.androidui.R
 import com.example.androidui.common.Constants
+import com.example.androidui.databinding.FragmentSingleRestaurantBinding
 import kotlin.math.abs
 
 
 class SingleRestaurantFragment : Fragment() {
+
+    private lateinit var binding : FragmentSingleRestaurantBinding
 
     private lateinit var pagerAdapter: HomeViewPagerAdapter
     private lateinit var sliderHandler: Handler
@@ -65,6 +67,7 @@ class SingleRestaurantFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding = FragmentSingleRestaurantBinding.bind(view)
 
         sharedPreferences =
             this.requireContext().getSharedPreferences(Constants.Prefs.image, Context.MODE_PRIVATE)
@@ -82,17 +85,17 @@ class SingleRestaurantFragment : Fragment() {
             )
         )
 
-        tvSingleRestaurantName.text = title
+        binding.tvSingleRestaurantName.text = title
 
-        rvSingleRestaurant.adapter = itemAdapter
-        rvSingleRestaurant.layoutManager =
+        binding.rvSingleRestaurant.adapter = itemAdapter
+        binding.rvSingleRestaurant.layoutManager =
             LinearLayoutManager(this.context, RecyclerView.HORIZONTAL, false)
 
         val bundle = Bundle()
         bundle.putInt(Constants.Prefs.image, image)
         bundle.putString(Constants.Prefs.title, title)
 
-        btnTakeAway.setOnClickListener {
+        binding.btnTakeAway.setOnClickListener {
             val singleNavController: NavController = Navigation.findNavController(view)
             singleNavController.navigate(
                 R.id.action_singleRestaurantFragment2_to_addToOrderFragment2,
@@ -100,11 +103,11 @@ class SingleRestaurantFragment : Fragment() {
             )
         }
 
-        imageBack.setOnClickListener {
+        binding.imageBack.setOnClickListener {
           activity?.onBackPressed()
         }
 
-        imageShare.setOnClickListener {
+        binding.imageShare.setOnClickListener {
 
             val sendIntent: Intent = Intent().apply {
                 action = Intent.ACTION_SEND
@@ -115,7 +118,7 @@ class SingleRestaurantFragment : Fragment() {
             val shareIntent = Intent.createChooser(sendIntent, null)
             startActivity(shareIntent)        }
 
-        viewPagerSingle.adapter = pagerAdapter
+        binding.viewPagerSingle.adapter = pagerAdapter
 
         val pageTurn = CompositePageTransformer()
         pageTurn.addTransformer(MarginPageTransformer(40))
@@ -124,20 +127,20 @@ class SingleRestaurantFragment : Fragment() {
             page.scaleY = 0.85f + r * 0.15f
         }
 
-        viewPagerSingle.setPageTransformer(pageTurn)
+        binding.viewPagerSingle.setPageTransformer(pageTurn)
         sliderHandler = Handler()
         sliderRunnable = Runnable {
 
-            if (viewPagerSingle.currentItem == pagerAdapter.itemCount) {
-                viewPagerSingle.currentItem = 0
+            if (binding.viewPagerSingle.currentItem == pagerAdapter.itemCount) {
+                binding.viewPagerSingle.currentItem = 0
             } else {
-                viewPagerSingle.currentItem = viewPagerSingle.currentItem + 1
+                binding.viewPagerSingle.currentItem = binding.viewPagerSingle.currentItem + 1
             }
         }
 
         dotsIndicator()
 
-        viewPagerSingle.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+        binding.viewPagerSingle.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             private var currentPage: Int = 0
 
             override fun onPageSelected(position: Int) {
@@ -152,16 +155,16 @@ class SingleRestaurantFragment : Fragment() {
             override fun onPageScrollStateChanged(state: Int) {
                 if (state == 1 && currentPage == pagerAdapter.itemCount - 1) {
                     currentPage = 0
-                    viewPagerSingle.currentItem = currentPage
+                    binding.viewPagerSingle.currentItem = currentPage
                 }
 
             }
         })
 
         val tabAdapter = TabAdapter(requireActivity().supportFragmentManager, lifecycle)
-        viewPagerTab.adapter = tabAdapter
+        binding.viewPagerTab.adapter = tabAdapter
 
-        TabLayoutMediator(tabLayoutTab, viewPagerTab) { tab, position ->
+        TabLayoutMediator(binding.tabLayoutTab, binding.viewPagerTab) { tab, position ->
             when (position) {
                 0 -> {
                     tab.text = "Beef & Lamb"
@@ -177,7 +180,7 @@ class SingleRestaurantFragment : Fragment() {
         }.attach()
 
 
-        viewPagerTab.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+        binding.viewPagerTab.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             private var currentPage: Int = 0
             override fun onPageScrolled(
                 position: Int,
@@ -193,7 +196,7 @@ class SingleRestaurantFragment : Fragment() {
 
                     currentPage = 0
 
-                    viewPagerTab.currentItem = currentPage
+                    binding.viewPagerTab.currentItem = currentPage
 
                 }
 
@@ -244,14 +247,14 @@ class SingleRestaurantFragment : Fragment() {
                 )
                 this?.layoutParams = layoutParams
             }
-            lytViewPagerSingle.addView(mDots[i])
+            binding.lytViewPagerSingle.addView(mDots[i])
         }
     }
 
     fun setDots(index: Int) {
-        val childCount = lytViewPagerSingle.childCount
+        val childCount = binding.lytViewPagerSingle.childCount
         for (i in 0 until childCount) {
-            val imageView = lytViewPagerSingle[i] as ImageView
+            val imageView = binding.lytViewPagerSingle[i] as ImageView
             if (i == index) {
                 imageView.setImageDrawable(
                     ContextCompat.getDrawable(

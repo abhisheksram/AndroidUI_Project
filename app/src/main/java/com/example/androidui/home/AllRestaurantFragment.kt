@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.R
 import com.example.androidui.adapters.AllRestaurantsAdapter
 import com.example.androidui.data.AllRestaurants
-import kotlinx.android.synthetic.main.fragment_all_restaurant.*
+import com.example.androidui.databinding.FragmentAllRestaurantBinding
 
 
 class AllRestaurantFragment : Fragment(R.layout.fragment_all_restaurant) {
@@ -32,9 +32,10 @@ class AllRestaurantFragment : Fragment(R.layout.fragment_all_restaurant) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val binding = FragmentAllRestaurantBinding.bind(view)
 
-        rvAllRestaurants.adapter = allRestaurantsAdapter
-        rvAllRestaurants.layoutManager = LinearLayoutManager(this.context, RecyclerView.VERTICAL,false)
+        binding.rvAllRestaurants.adapter = allRestaurantsAdapter
+        binding.rvAllRestaurants.layoutManager = LinearLayoutManager(this.context, RecyclerView.VERTICAL,false)
 
     }
 

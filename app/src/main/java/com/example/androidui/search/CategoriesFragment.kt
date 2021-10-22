@@ -3,13 +3,11 @@ package com.example.androidui.search
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
-import android.view.WindowManager
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.androidui.R
 import com.example.androidui.adapters.CategoriesAdapter
 import com.example.androidui.data.Categories
-import kotlinx.android.synthetic.main.fragment_categories.*
-
+import com.example.androidui.databinding.FragmentCategoriesBinding
 
 class CategoriesFragment : Fragment(R.layout.fragment_categories) {
 
@@ -36,15 +34,15 @@ class CategoriesFragment : Fragment(R.layout.fragment_categories) {
         )
     )
 
-    private lateinit var gridLayoutManager : GridLayoutManager
+    private lateinit var gridLayoutManager: GridLayoutManager
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+        val binding = FragmentCategoriesBinding.bind(view)
 
         gridLayoutManager = GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false)
-        rvCategories.adapter = categoriesAdapter
-        rvCategories.layoutManager = gridLayoutManager
+        binding.rvCategories.adapter = categoriesAdapter
+        binding.rvCategories.layoutManager = gridLayoutManager
 
     }
 }

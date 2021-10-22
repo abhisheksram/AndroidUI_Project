@@ -22,11 +22,12 @@ import com.example.androidui.adapters.HomeViewPagerAdapter
 import com.example.androidui.adapters.PartnersAdapter
 import com.example.androidui.common.Constants
 import com.example.androidui.data.*
-import kotlinx.android.synthetic.main.fragment_home.*
+import com.example.androidui.databinding.FragmentHomeBinding
 
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
+    private lateinit var binding: FragmentHomeBinding
 
     private var pagerAdapter = HomeViewPagerAdapter(
         listOf(
@@ -42,22 +43,28 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         listOf(
             BestPartners(
                 R.mipmap.bestpartner1, "Krispy Creme",
-                "St Georgece Terrace, Perth"),
+                "St Georgece Terrace, Perth"
+            ),
             BestPartners(
                 R.mipmap.bestpartner2, "Mario Italiano",
-                "Hay street , Perth City"),
+                "Hay street , Perth City"
+            ),
             BestPartners(
                 R.mipmap.bestpartner1, "Krispy Creme",
-                "St Georgece Terrace, Perth"),
+                "St Georgece Terrace, Perth"
+            ),
             BestPartners(
                 R.mipmap.bestpartner2, "Mario Italiano",
-                "Hay street , Perth City"),
+                "Hay street , Perth City"
+            ),
             BestPartners(
                 R.mipmap.bestpartner1, "Krispy Creme",
-                "St Georgece Terrace, Perth"),
+                "St Georgece Terrace, Perth"
+            ),
             BestPartners(
                 R.mipmap.bestpartner2, "Mario Italiano",
-                "Hay street , Perth City")
+                "Hay street , Perth City"
+            )
         )
     )
 
@@ -65,22 +72,28 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         listOf(
             BestRestaurants(
                 R.mipmap.best_retaurants1, "McDonald’s",
-                "Hay street , Perth City"),
+                "Hay street , Perth City"
+            ),
             BestRestaurants(
                 R.mipmap.best_retaurants2, "The Halal Guys",
-                "Hay street , Perth City"),
+                "Hay street , Perth City"
+            ),
             BestRestaurants(
                 R.mipmap.best_retaurants1, "McDonald’s",
-                "Hay street , Perth City"),
+                "Hay street , Perth City"
+            ),
             BestRestaurants(
                 R.mipmap.best_retaurants2, "The Halal Guys",
-                "Hay street , Perth City"),
+                "Hay street , Perth City"
+            ),
             BestRestaurants(
                 R.mipmap.best_retaurants1, "McDonald’s",
-                "Hay street , Perth City"),
+                "Hay street , Perth City"
+            ),
             BestRestaurants(
                 R.mipmap.best_retaurants2, "The Halal Guys",
-                "Hay street , Perth City")
+                "Hay street , Perth City"
+            )
         )
     )
 
@@ -100,58 +113,63 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding = FragmentHomeBinding.bind(view)
 
         dotsIndicator()
 
-        viewPagerHome1.adapter = pagerAdapter
-        viewPagerHome1.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+        binding.viewPagerHome1.adapter = pagerAdapter
+        binding.viewPagerHome1.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 setDots(position)
             }
         })
 
-        sharedPreferences = this.requireContext().getSharedPreferences(Constants.Location.location, Context.MODE_PRIVATE)
+        sharedPreferences = this.requireContext()
+            .getSharedPreferences(Constants.Location.location, Context.MODE_PRIVATE)
 
-        val location = sharedPreferences.getString("location",null)
+        val location = sharedPreferences.getString("location", null)
 
-        if (location != null) { tvDeliveryTo.text = location}
-        else { tvDeliveryTo.text = R.string.location.toString() }
+        if (location != null) {
+            binding.tvDeliveryTo.text = location
+        } else {
+            binding.tvDeliveryTo.text = R.string.location.toString()
+        }
 
         initRecycler()
 
-        tvHomeFilter.setOnClickListener {
+        binding.tvHomeFilter.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
             navController.navigate(R.id.action_navigation_home2_to_filterFragment2)
         }
 
-        tvSeeAll1.setOnClickListener {
+        binding.tvSeeAll1.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
             navController.navigate(R.id.action_navigation_home2_to_featuredPartnersFragment2)
         }
 
-        tvSeeAll2.setOnClickListener {
+        binding.tvSeeAll2.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
             navController.navigate(R.id.action_navigation_home2_to_topRestaurantFragment2)
         }
 
-        tvSeeAll3.setOnClickListener {
+        binding.tvSeeAll3.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
             navController.navigate(R.id.action_navigation_home2_to_allRestaurantFragment2)
         }
 
     }
 
-    private fun initRecycler(){
-        rvHome1.adapter = partnersAdapter
-        rvHome1.layoutManager = LinearLayoutManager(this.context,RecyclerView.HORIZONTAL,false)
+    private fun initRecycler() {
+        binding.rvHome1.adapter = partnersAdapter
+        binding.rvHome1.layoutManager = LinearLayoutManager(this.context, RecyclerView.HORIZONTAL, false)
 
-        rvHome2.adapter = bestRestaurantsAdapter
-        rvHome2.layoutManager = LinearLayoutManager(this.context,RecyclerView.HORIZONTAL,false)
+        binding.rvHome2.adapter = bestRestaurantsAdapter
+        binding.rvHome2.layoutManager = LinearLayoutManager(this.context, RecyclerView.HORIZONTAL, false)
 
-        rvHome3.adapter = allRestaurantsAdapter
-        rvHome3.isNestedScrollingEnabled = false
-        rvHome3.layoutManager = LinearLayoutManager(this.context,RecyclerView.VERTICAL,false)
+        binding.rvHome3.adapter = allRestaurantsAdapter
+        binding.rvHome3.isNestedScrollingEnabled = false
+        binding.rvHome3.layoutManager = LinearLayoutManager(this.context, RecyclerView.VERTICAL, false)
     }
 
     private fun dotsIndicator() {
@@ -173,14 +191,14 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 )
                 this?.layoutParams = layoutParams
             }
-            lytViewPager1Dots.addView(mDots[i])
+            binding.lytViewPager1Dots.addView(mDots[i])
         }
     }
 
     fun setDots(index: Int) {
-        val childCount = lytViewPager1Dots.childCount
+        val childCount = binding.lytViewPager1Dots.childCount
         for (i in 0 until childCount) {
-            val imageView = lytViewPager1Dots[i] as ImageView
+            val imageView = binding.lytViewPager1Dots[i] as ImageView
             if (i == index) {
                 imageView.setImageDrawable(
                     ContextCompat.getDrawable(

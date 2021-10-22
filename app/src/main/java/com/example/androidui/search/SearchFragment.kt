@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.androidui.R
 import com.example.androidui.adapters.TopRestaurantAdapter
 import com.example.androidui.data.TopRestaurants
-import kotlinx.android.synthetic.main.fragment_search.*
+import com.example.androidui.databinding.FragmentSearchBinding
 
 class SearchFragment : Fragment(R.layout.fragment_search) {
 
@@ -34,19 +34,20 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val binding = FragmentSearchBinding.bind(view)
 
         val gridLayoutManager = GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false)
-        rvSearchTopRestaurants.adapter = topRestaurantAdapter
-        rvSearchTopRestaurants.layoutManager = gridLayoutManager
+        binding.rvSearchTopRestaurants.adapter = topRestaurantAdapter
+        binding.rvSearchTopRestaurants.layoutManager = gridLayoutManager
 
 
-        tvTopCategory.setOnClickListener {
+        binding.tvTopCategory.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
             navController.navigate(R.id.action_navigation_search2_to_categoriesFragment2)
 
         }
 
-        tvSearchView.setOnClickListener {
+        binding.tvSearchView.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
             navController.navigate(R.id.action_navigation_search2_to_searchItemsFragment2)
 

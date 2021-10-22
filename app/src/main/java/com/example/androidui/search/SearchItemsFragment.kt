@@ -3,7 +3,6 @@ package com.example.androidui.search
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
-import android.view.WindowManager
 import android.widget.SearchView
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -13,7 +12,7 @@ import com.example.androidui.R
 import com.example.androidui.adapters.SearchAdapter
 import com.example.androidui.common.Constants
 import com.example.androidui.data.SearchList
-import kotlinx.android.synthetic.main.fragment_search_items.*
+import com.example.androidui.databinding.FragmentSearchItemsBinding
 
 class SearchItemsFragment : Fragment(R.layout.fragment_search_items) {
 
@@ -26,13 +25,13 @@ class SearchItemsFragment : Fragment(R.layout.fragment_search_items) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+        val binding = FragmentSearchItemsBinding.bind(view)
 
-        searchItem.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+        binding.searchItem.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
 
                 val bundle = Bundle()
-                bundle.putString(Constants.Prefs.title,searchItem.query.toString())
+                bundle.putString(Constants.Prefs.title,binding.searchItem.query.toString())
                 val navController: NavController = Navigation.findNavController(view)
                 navController.navigate(R.id.action_searchItemsFragment2_to_burgersFragment2)
 
@@ -40,8 +39,8 @@ class SearchItemsFragment : Fragment(R.layout.fragment_search_items) {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                rvSearchItems.adapter = searchAdapter
-                rvSearchItems.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.VERTICAL,false)
+                binding.rvSearchItems.adapter = searchAdapter
+                binding.rvSearchItems.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.VERTICAL,false)
 
                 return false
             }
@@ -49,13 +48,13 @@ class SearchItemsFragment : Fragment(R.layout.fragment_search_items) {
 
         })
 
-        tvSearchItemClear.setOnClickListener {
-            rvSearchItems.adapter = null
+        binding.tvSearchItemClear.setOnClickListener {
+            binding.rvSearchItems.adapter = null
         }
 
-        tvSearchItemCancel.setOnClickListener {
-            searchItem.setQuery("",false)
-            rvSearchItems.adapter = null
+        binding.tvSearchItemCancel.setOnClickListener {
+            binding.searchItem.setQuery("",false)
+            binding.rvSearchItems.adapter = null
         }
 
     }

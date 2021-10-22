@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.androidui.R
 import com.example.androidui.adapters.SingleRestaurantAdapter
 import com.example.androidui.data.SingleRestaurant
-import kotlinx.android.synthetic.main.fragment_single_restaurant_tab.*
+import com.example.androidui.databinding.FragmentSingleRestaurantTabBinding
 
 
 class SingleRestaurantTabFragment : Fragment(R.layout.fragment_single_restaurant_tab) {
@@ -73,15 +73,16 @@ class SingleRestaurantTabFragment : Fragment(R.layout.fragment_single_restaurant
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val binding = FragmentSingleRestaurantTabBinding.bind(view)
 
-        rvTabSingleRestaurant.adapter = singleRestaurantAdapter1
-        rvTabSingleRestaurant.isNestedScrollingEnabled = false
-        rvTabSingleRestaurant.layoutManager =
+        binding.rvTabSingleRestaurant.adapter = singleRestaurantAdapter1
+        binding.rvTabSingleRestaurant.isNestedScrollingEnabled = false
+        binding.rvTabSingleRestaurant.layoutManager =
             LinearLayoutManager(this.context, RecyclerView.VERTICAL, false)
 
-        rvTabSingleRestaurant1.adapter = singleRestaurantAdapter2
-        rvTabSingleRestaurant1.isNestedScrollingEnabled = false
-        rvTabSingleRestaurant1.layoutManager =
+        binding.rvTabSingleRestaurant1.adapter = singleRestaurantAdapter2
+        binding.rvTabSingleRestaurant1.isNestedScrollingEnabled = false
+        binding.rvTabSingleRestaurant1.layoutManager =
             LinearLayoutManager(this.context, RecyclerView.VERTICAL, false)
 
     }

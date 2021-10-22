@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.androidui.R
 import com.example.androidui.adapters.TopRestaurantAdapter
 import com.example.androidui.data.TopRestaurants
-import kotlinx.android.synthetic.main.fragment_top_restaurant.*
+import com.example.androidui.databinding.FragmentTopRestaurantBinding
 
 class TopRestaurantFragment : Fragment(R.layout.fragment_top_restaurant) {
 
@@ -32,10 +32,11 @@ class TopRestaurantFragment : Fragment(R.layout.fragment_top_restaurant) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val binding = FragmentTopRestaurantBinding.bind(view)
 
         gridLayoutManager = GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false)
-        rvTopRestaurants.adapter = topRestaurantAdapter
-        rvTopRestaurants.layoutManager = gridLayoutManager
+        binding.rvTopRestaurants.adapter = topRestaurantAdapter
+        binding.rvTopRestaurants.layoutManager = gridLayoutManager
 
     }
 }

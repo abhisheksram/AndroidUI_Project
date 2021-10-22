@@ -4,14 +4,12 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
-import android.view.WindowManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.androidui.R
 import com.example.androidui.adapters.FeaturedPartnerAdapter
 import com.example.androidui.common.Constants
 import com.example.androidui.data.Partners
-import kotlinx.android.synthetic.main.fragment_burgers.*
-
+import com.example.androidui.databinding.FragmentBurgersBinding
 
 class BurgersFragment : Fragment(R.layout.fragment_burgers) {
 
@@ -35,28 +33,27 @@ class BurgersFragment : Fragment(R.layout.fragment_burgers) {
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+        val binding = FragmentBurgersBinding.bind(view)
 
         val args = this.arguments
         val title = args?.getString(Constants.Prefs.title)
 
         if (title == null){
-            tvCount.text = "We have founds ${partnerAdapter.itemCount} results for your search"
+            binding.tvCount.text = "We have founds ${partnerAdapter.itemCount} results for your search"
             //bottomToolbar.title = "Search Results"
         } else {
-            tvCount.text = "We have founds ${partnerAdapter.itemCount} results for $title"
+            binding.tvCount.text = "We have founds ${partnerAdapter.itemCount} results for $title"
             //bottomToolbar.title = title
         }
 
-        rvBurgers.layoutManager = StaggeredGridLayoutManager(
+        binding.rvBurgers.layoutManager = StaggeredGridLayoutManager(
             2,
             StaggeredGridLayoutManager.VERTICAL
         )
 
-        rvBurgers.adapter = partnerAdapter
+        binding.rvBurgers.adapter = partnerAdapter
 
-        tvSearchAgain.setOnClickListener {
+        binding.tvSearchAgain.setOnClickListener {
             activity?.onBackPressed()
         }
 
