@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/yugothib"
+        android:fontFamily="@font/yugothil"
         android:text="@string/welcome_to_tamang_food_services"
         android:textColor="#010F07"
         android:textSize="33sp"
@@ -51,7 +51,7 @@
             android:id="@+id/tvSignInEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/yugothib"
+            android:fontFamily="@font/yugothil"
             android:text="@string/email_address_cap"
             android:textAppearance="@style/email_address"
             android:textColor="#868686"
@@ -61,6 +61,7 @@
             android:id="@+id/etSignInEmailID"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:fontFamily="@font/yugothib"
             android:hint="@string/enter_email_id"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
@@ -88,7 +89,7 @@
             android:id="@+id/tvSignInPW"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/yugothib"
+            android:fontFamily="@font/yugothil"
             android:text="@string/password"
             android:textAppearance="@style/email_address"
             android:textColor="#868686"
@@ -98,6 +99,7 @@
             android:id="@+id/etSignInPW"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:fontFamily="@font/yugothib"
             android:hint="@string/enter_password"
             android:importantForAutofill="no"
             android:inputType="textPassword"
@@ -114,10 +116,10 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:background="@color/trans"
-        android:fontFamily="@font/yugothib"
+        android:fontFamily="@font/yugothil"
         android:gravity="center_vertical"
         android:paddingHorizontal="10dp"
         android:text="@string/forgot_password_1"
@@ -133,7 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/intro_button_bg"
         android:fontFamily="@font/yugothib"
@@ -149,11 +151,12 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_gravity="bottom|center"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:layout_weight=".7"
         android:orientation="horizontal"
@@ -166,9 +169,11 @@
             android:layout_height="30dp"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="10dp"
+            android:fontFamily="@font/yugothil"
             android:gravity="center"
             android:text="@string/don_t_have_account"
-            android:textSize="14sp" />
+            android:textColor="#010F07"
+            android:textSize="12sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnGoToSignUp"
@@ -176,11 +181,39 @@
             android:layout_height="30dp"
             android:layout_gravity="center_vertical"
             android:background="@color/trans"
+            android:fontFamily="@font/yugothil"
             android:gravity="center"
             android:text="@string/create_new_account"
             android:textColor="#EEA734"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_facebook"
+        app:layout_constraintBottom_toTopOf="@+id/imageView14"
+        app:layout_constraintEnd_toEndOf="@+id/imageView14"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/imageView14"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_google"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

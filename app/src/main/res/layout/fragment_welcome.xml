@@ -16,7 +16,7 @@
             android:layout_width="437dp"
             android:layout_height="437dp"
             android:layout_marginStart="-50dp"
-            android:layout_marginTop="-70dp"
+            android:layout_marginTop="-50dp"
             android:layout_marginEnd="50dp"
             android:background="@drawable/welcome_image"
             app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +38,7 @@
             android:id="@+id/tamang_food"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="70dp"
             android:layout_marginEnd="5dp"
             android:fontFamily="@font/poppins_bold"
             android:gravity="center_horizontal|top"
@@ -71,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:fontFamily="@font/poppins_light"
+            android:fontFamily="@font/poppins_regular"
             android:gravity="center_horizontal|top"
             android:paddingHorizontal="30dp"
             android:text="@string/welcomeText"
@@ -80,14 +80,14 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="TextContrastCheck" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="30dp"
+            android:layout_marginBottom="20dp"
             android:src="@drawable/ic_welcome_cone"
             app:layout_constraintBottom_toTopOf="@+id/tvWelcome"
             app:layout_constraintEnd_toEndOf="parent"

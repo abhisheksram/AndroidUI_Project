@@ -89,6 +89,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/yugothil"
             app:layout_constraintStart_toStartOf="@+id/imageBurgers"
             app:layout_constraintTop_toBottomOf="@+id/imageBurgers" />
 
@@ -99,6 +101,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/yugothib"
             android:text="@string/chinese"
+            android:textSize="@dimen/t16"
             app:layout_constraintStart_toStartOf="@+id/tvBurgerName"
             app:layout_constraintTop_toBottomOf="@+id/tvBurgerName" />
 
@@ -120,6 +123,7 @@
             android:layout_marginStart="5dp"
             android:fontFamily="@font/yugothib"
             android:text="@string/american"
+            android:textSize="@dimen/t16"
             app:layout_constraintStart_toEndOf="@+id/textView12"
             app:layout_constraintTop_toTopOf="@+id/tvRVPartnerCountry1" />
 

@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/yugothib"
+        android:fontFamily="@font/yugothil"
         android:text="@string/reset_email_sent"
         android:textColor="#010F07"
         android:textSize="34sp"

@@ -31,6 +31,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/yugothil"
+            android:textSize="@dimen/t16"
             app:layout_constraintStart_toStartOf="@+id/imageFeaturedItems"
             app:layout_constraintTop_toBottomOf="@+id/imageFeaturedItems" />
 
@@ -41,6 +43,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/yugothib"
             android:text="@string/chinese"
+            android:textSize="@dimen/t14"
             app:layout_constraintStart_toStartOf="@+id/tvFeaturedItemsName"
             app:layout_constraintTop_toBottomOf="@+id/tvFeaturedItemsName" />
 
@@ -62,6 +65,7 @@
             android:layout_marginStart="15dp"
             android:fontFamily="@font/yugothib"
             android:text="@string/american"
+            android:textSize="@dimen/t14"
             app:layout_constraintStart_toEndOf="@+id/textView12"
             app:layout_constraintTop_toTopOf="@+id/tvRVPartnerCountry1" />
 

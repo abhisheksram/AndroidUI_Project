@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".login.CreateAccountFragment"
-    >
+    tools:context=".login.CreateAccountFragment">
 
     <TextView
         android:id="@+id/tvCreateAccount"
@@ -14,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/yugothib"
+        android:fontFamily="@font/yugothil"
         android:text="@string/create_account"
         android:textColor="#010F07"
         android:textSize="33sp"
@@ -44,10 +43,12 @@
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="0dp"
             android:background="@color/trans"
+            android:fontFamily="@font/yugothib"
             android:text="@string/already_have_account"
             android:textColor="#EEA734"
             android:textSize="@dimen/t16"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="RelativeOverlap" />
 
 
         <TextView
@@ -82,7 +83,7 @@
             android:id="@+id/tvCreateName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/yugothib"
+            android:fontFamily="@font/yugothil"
             android:text="@string/name"
             android:textAppearance="@style/email_address"
             android:textColor="#868686"
@@ -92,12 +93,13 @@
             android:id="@+id/etCreateName"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:importantForAutofill="no"
+            android:fontFamily="@font/yugothib"
             android:hint="@string/enter_name"
+            android:importantForAutofill="no"
             android:inputType="textPersonName"
+            android:singleLine="true"
             android:textColor="#010F07"
             android:textSize="@dimen/t16"
-            android:singleLine="true"
             tools:ignore="LabelFor,RtlSymmetry" />
 
     </LinearLayout>
@@ -119,7 +121,7 @@
             android:id="@+id/tvCreateEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/yugothib"
+            android:fontFamily="@font/yugothil"
             android:text="@string/email_address_cap"
             android:textAppearance="@style/email_address"
             android:textColor="#868686"
@@ -129,13 +131,14 @@
             android:id="@+id/etCreateEmailID"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:fontFamily="@font/yugothib"
+            android:hint="@string/enter_email_id"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
-            android:hint="@string/enter_email_id"
+            android:singleLine="true"
             android:textColor="#010F07"
             android:textSize="@dimen/t16"
-            tools:ignore="RtlSymmetry"
-            android:singleLine="true"/>
+            tools:ignore="RtlSymmetry" />
 
     </LinearLayout>
 
@@ -156,7 +159,7 @@
             android:id="@+id/tvCreatePW"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/yugothib"
+            android:fontFamily="@font/yugothil"
             android:text="@string/password"
             android:textAppearance="@style/email_address"
             android:textColor="#868686"
@@ -166,13 +169,14 @@
             android:id="@+id/etCreatePW"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:importantForAutofill="no"
+            android:fontFamily="@font/yugothib"
             android:hint="@string/enter_password"
+            android:importantForAutofill="no"
             android:inputType="textPassword"
+            android:singleLine="true"
             android:textColor="#010F07"
             android:textSize="@dimen/t16"
-            tools:ignore="LabelFor,RtlSymmetry"
-            android:singleLine="true"/>
+            tools:ignore="LabelFor,RtlSymmetry" />
 
     </LinearLayout>
 
@@ -203,14 +207,42 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
-        android:gravity="center"
         android:fontFamily="@font/yugothib"
+        android:gravity="center"
         android:text="@string/by_signing_up_you_agree_to_our_terms_conditions_privacy_policy"
         android:textColor="#868686"
         android:textSize="@dimen/t16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_facebook"
+        app:layout_constraintBottom_toTopOf="@+id/imageView14"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_google"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        tools:ignore="ContentDescription" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

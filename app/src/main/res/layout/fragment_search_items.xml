@@ -32,6 +32,7 @@
             android:layout_weight=".8"
             android:gravity="center"
             android:text="@string/cancel"
+            android:fontFamily="@font/yugothib"
             android:textColor="@color/Black"
             android:textSize="@dimen/t16" />
 
@@ -47,6 +48,7 @@
         android:layout_weight=".8"
         android:gravity="center"
         android:text="@string/recent_searches"
+        android:fontFamily="@font/yugothil"
         android:textColor="@color/Black"
         android:textSize="@dimen/t16"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +63,7 @@
         android:layout_weight=".8"
         android:gravity="center"
         android:text="@string/clear_all"
+        android:fontFamily="@font/yugothil"
         android:textColor="@color/Black"
         android:textSize="@dimen/t16"
         app:layout_constraintEnd_toEndOf="parent"

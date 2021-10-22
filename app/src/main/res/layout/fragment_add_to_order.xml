@@ -28,6 +28,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:text="@string/cookie_sandwich"
+        android:fontFamily="@font/yugothib"
         android:textColor="@color/Black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +43,7 @@
         android:layout_marginEnd="20dp"
         android:textSize="@dimen/t16"
         android:text="@string/shortbread_chocolate_turtle_cookies_and_red_velvet_8_ounces_cream_cheese_softened"
+        android:fontFamily="@font/yugothib"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAddToOrderName" />
@@ -54,6 +56,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:text="@string/chinese_american_deshi_food"
+        android:fontFamily="@font/yugothib"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAddToOrderText" />
@@ -327,7 +330,7 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_margin="40dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -348,6 +351,8 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:text="@string/_01"
+            android:fontFamily="@font/yugothib"
+            android:textStyle="bold"
             android:textSize="30sp" />
 
         <androidx.appcompat.widget.AppCompatButton

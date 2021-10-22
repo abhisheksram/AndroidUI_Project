@@ -23,7 +23,7 @@ class VerifyMobileNoFragment : Fragment(R.layout.fragment_verify_mobile_no) {
         val args = this.arguments
         val phone = args?.getString(Constants.Bundles.phone)
 
-        binding.tvReceivePhone.text = "Enter the 4-Digit code sent to you at    $phone"
+        binding.tvReceivePhone.text = "Enter the 4-Digit code sent to you at \n $phone"
 
         binding.etCode1.doOnTextChanged { _, _, _, after ->
             if (after == 1) {

@@ -25,7 +25,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/textview"
         android:textSize="18sp"
-        android:fontFamily="@font/yugothib"
+        android:fontFamily="@font/yugothil"
         app:layout_constraintStart_toEndOf="@+id/image_single_restaurants"
         app:layout_constraintTop_toTopOf="@+id/image_single_restaurants" />
 
@@ -64,6 +64,7 @@
         android:textColor="#EEA734"
         android:textSize="@dimen/t14"
         android:fontFamily="@font/yugothib"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView21"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView21" />
