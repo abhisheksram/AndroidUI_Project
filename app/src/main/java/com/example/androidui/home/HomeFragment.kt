@@ -30,11 +30,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private var pagerAdapter = HomeViewPagerAdapter(
         listOf(
-            ImageList(R.mipmap.home_image1),
-            ImageList(R.mipmap.home_image1),
-            ImageList(R.mipmap.home_image1),
-            ImageList(R.mipmap.home_image1),
-            ImageList(R.mipmap.home_image1)
+            ImageList(R.mipmap.home_image),
+            ImageList(R.mipmap.home_image),
+            ImageList(R.mipmap.home_image),
+            ImageList(R.mipmap.home_image),
+            ImageList(R.mipmap.home_image)
         )
     )
 
@@ -87,12 +87,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private var allRestaurantsAdapter = HomeRestaurantsAdapter(
         listOf(
-            AllRestaurants(R.mipmap.all_restaurants11, "McDonald's"),
-            AllRestaurants(R.mipmap.all_restaurants12, "Cafe Brichor’s"),
-            AllRestaurants(R.mipmap.all_restaurants13, "Mayfield Bakery & Cafe"),
-            AllRestaurants(R.mipmap.all_restaurants11, "McDonald's"),
-            AllRestaurants(R.mipmap.all_restaurants12, "Cafe Brichor’s"),
-            AllRestaurants(R.mipmap.all_restaurants13, "Mayfield Bakery & Cafe")
+            AllRestaurants(R.mipmap.all_restaurants1, "McDonald's"),
+            AllRestaurants(R.mipmap.all_restaurants2, "Cafe Brichor’s"),
+            AllRestaurants(R.mipmap.all_restaurants3, "Mayfield Bakery & Cafe"),
+            AllRestaurants(R.mipmap.all_restaurants1, "McDonald's"),
+            AllRestaurants(R.mipmap.all_restaurants2, "Cafe Brichor’s"),
+            AllRestaurants(R.mipmap.all_restaurants3, "Mayfield Bakery & Cafe")
         )
     )
 

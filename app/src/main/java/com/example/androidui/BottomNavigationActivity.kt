@@ -7,25 +7,25 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_bottom_navigation.*
+import com.example.androidui.databinding.ActivityBottomNavigationBinding
 
 
 class BottomNavigationActivity: AppCompatActivity() {
+
+    private lateinit var binding: ActivityBottomNavigationBinding
 
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bottom_navigation)
-
-        val btmNavView = findViewById<BottomNavigationView>(com.example.androidui.R.id.btmNavView)
+        binding = ActivityBottomNavigationBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val navHost = supportFragmentManager.findFragmentById(R.id.navHostBottomNav) as NavHostFragment
-        btmNavView.setupWithNavController(navHost.findNavController())
+        binding.btmNavView.setupWithNavController(navHost.findNavController())
         navController = navHost.navController
 
-        setSupportActionBar(bottomToolbar)
+        setSupportActionBar(binding.bottomToolbar)
         setupActionBarWithNavController(navController)
     }
 

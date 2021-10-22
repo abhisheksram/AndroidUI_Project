@@ -11,8 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/yugothib"
         android:text="@string/reset_email_sent"
         android:textColor="#010F07"
@@ -21,11 +20,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/tvHavingProblem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/having_problem"
+        android:textColor="#EEA734"
+        android:textSize="@dimen/t16"
+        app:layout_constraintEnd_toEndOf="@+id/btnSendEmail"
+        app:layout_constraintTop_toBottomOf="@+id/sendEmailText"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
         android:id="@+id/sendEmailText"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="80dp"
         android:fontFamily="@font/yugothib"
         android:text="@string/email_to"
@@ -55,17 +65,6 @@
         app:layout_constraintTop_toBottomOf="@+id/sendEmailText"
         tools:ignore="TextContrastCheck" />
 
-    <TextView
-        android:id="@+id/tvHavingProblem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
-        android:text="@string/having_problem"
-        android:textColor="#EEA734"
-        android:textSize="@dimen/t16"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sendEmailText"
-        tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/imageView2"

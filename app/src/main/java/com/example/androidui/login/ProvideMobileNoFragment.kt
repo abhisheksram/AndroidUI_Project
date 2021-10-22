@@ -7,8 +7,8 @@ import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.androidui.R
-import kotlinx.android.synthetic.main.fragment_provide_mobile_no.*
 import com.example.androidui.common.Constants
+import com.example.androidui.databinding.FragmentProvideMobileNoBinding
 import com.example.androidui.util.showToast
 
 
@@ -18,15 +18,16 @@ class ProvideMobileNoFragment : Fragment(R.layout.fragment_provide_mobile_no) {
     @SuppressLint("RestrictedApi")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val binding = FragmentProvideMobileNoBinding.bind(view)
 
-        ccp.setDefaultCountryUsingNameCode("IND")
+        binding.ccp.setDefaultCountryUsingNameCode("IND")
 
-        btnMobileSignUp.setOnClickListener {
+        binding.btnMobileSignUp.setOnClickListener {
 
-            if(etPhoneNumber.text.isNullOrEmpty()){
+            if(binding.etPhoneNumber.text.isNullOrEmpty()){
                 this.context?.showToast("Provide Phone number")
             } else
-                if (etPhoneNumber.text!!.length!=10){
+                if (binding.etPhoneNumber.text!!.length!=10){
                     this.context?.showToast("Phone number invalid")
                 }
 
@@ -34,7 +35,7 @@ class ProvideMobileNoFragment : Fragment(R.layout.fragment_provide_mobile_no) {
                 val bundle = Bundle()
                 bundle.putString(
                     Constants.Bundles.phone,
-                    "+${ccp.selectedCountryCode} ${etPhoneNumber.text}"
+                    "+${binding.ccp.selectedCountryCode} ${binding.etPhoneNumber.text}"
                 )
 
                 val navController: NavController = Navigation.findNavController(view)

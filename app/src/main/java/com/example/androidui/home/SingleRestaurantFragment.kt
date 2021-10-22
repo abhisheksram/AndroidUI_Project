@@ -70,7 +70,7 @@ class SingleRestaurantFragment : Fragment() {
             this.requireContext().getSharedPreferences(Constants.Prefs.image, Context.MODE_PRIVATE)
 
         val title = sharedPreferences.getString("title",null)
-        val image = sharedPreferences.getInt("image",R.mipmap.all_restaurants13)
+        val image = sharedPreferences.getInt("image",R.mipmap.all_restaurants3)
 
         pagerAdapter = HomeViewPagerAdapter(
             listOf(

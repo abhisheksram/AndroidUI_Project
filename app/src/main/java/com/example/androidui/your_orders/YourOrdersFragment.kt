@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidui.R
 import com.example.androidui.adapters.YourOrderAdapter
 import com.example.androidui.data.Orders
+import com.example.androidui.databinding.FragmentYourOrdersBinding
 import com.example.androidui.util.showToast
-import kotlinx.android.synthetic.main.fragment_your_orders.*
 
 
 class YourOrdersFragment : Fragment(R.layout.fragment_your_orders) {
@@ -30,31 +30,32 @@ class YourOrdersFragment : Fragment(R.layout.fragment_your_orders) {
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val binding = FragmentYourOrdersBinding.bind(view)
 
-        rvYourOrders.adapter = ordersAdapter
-        rvYourOrders.isNestedScrollingEnabled = false
-        rvYourOrders.layoutManager = LinearLayoutManager(this.context,LinearLayoutManager.VERTICAL,false)
+        binding.rvYourOrders.adapter = ordersAdapter
+        binding.rvYourOrders.isNestedScrollingEnabled = false
+        binding.rvYourOrders.layoutManager = LinearLayoutManager(this.context,LinearLayoutManager.VERTICAL,false)
 
-        btnConfirmOrder.setOnClickListener {
+        binding.btnConfirmOrder.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
             navController.navigate(R.id.action_yourOrdersFragment2_to_paymentFragment2)
         }
 
-        btnPromoCode.setOnClickListener {
+        binding.btnPromoCode.setOnClickListener {
             this.context?.showToast("No promo codes are available")
         }
 
-        btnAddMoreItems.setOnClickListener {
+        binding.btnAddMoreItems.setOnClickListener {
             this.context?.showToast("Currently this option is not available")
         }
 
         val subTotal = ordersAdapter.itemCount * 10
-        tvSubtotal.text = "AUD$$subTotal"
+        binding.tvSubtotal.text = "AUD$$subTotal"
 
         val delivery = 0
-        tvTotalDelivery.text = "$$delivery"
+        binding.tvTotalDelivery.text = "$$delivery"
 
         val total = subTotal + delivery
-        tvTotalOrder.text ="AUD$$total"
+        binding.tvTotalOrder.text ="AUD$$total"
     }
 }

@@ -12,23 +12,27 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.androidui.R
 import com.example.androidui.common.Constants
-import kotlinx.android.synthetic.main.fragment_signin.*
+import com.example.androidui.databinding.FragmentSigninBinding
 
 class SignInFragment : Fragment(R.layout.fragment_signin) {
+
+    private lateinit var fragmentSignInBinding: FragmentSigninBinding
 
     @SuppressLint("RestrictedApi", "SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val binding = FragmentSigninBinding.bind(view)
+        fragmentSignInBinding = binding
 
-        btnSignIn.setOnClickListener {
+        binding.btnSignIn.setOnClickListener {
 
             val pref_signed_in = "Sign_IN"
 
             val sharedPreferences: SharedPreferences? =
                 context?.getSharedPreferences(Constants.SighIn.email, Context.MODE_PRIVATE)
 
-            val email = etSignInEmailID.text.toString()
-            val password = etSignInPW.text.toString()
+            val email = binding.etSignInEmailID.text.toString()
+            val password = binding.etSignInPW.text.toString()
 
             when {
                 email.isEmpty() -> {
@@ -38,22 +42,22 @@ class SignInFragment : Fragment(R.layout.fragment_signin) {
                     this.context?.showToast("Password Empty")
                 }
                 sharedPreferences?.getString("Email$email", "").isNullOrEmpty() -> {
-                    tvSignInEmail.setTextColor(
+                    binding.tvSignInEmail.setTextColor(
                         ContextCompat.getColor(
                             this.requireContext(),
                             R.color.Red
                         )
                     )
-                    tvSignInEmail.text = "Incorrect E-mail"
+                    binding.tvSignInEmail.text = "Incorrect E-mail"
                 }
                 sharedPreferences?.getString("Password$password", "").isNullOrEmpty() -> {
-                    tvSignInPW.setTextColor(
+                    binding.tvSignInPW.setTextColor(
                         ContextCompat.getColor(
                             this.requireContext(),
                             R.color.Red
                         )
                     )
-                    tvSignInPW.text = "Incorrect Password"
+                    binding.tvSignInPW.text = "Incorrect Password"
                 }
 
                 else -> {
@@ -72,12 +76,12 @@ class SignInFragment : Fragment(R.layout.fragment_signin) {
             }
         }
 
-        btnGoToSignUp.setOnClickListener {
+        binding.btnGoToSignUp.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
             navController.navigate(R.id.action_signInFragment2_to_createAccountFragment2)
         }
 
-        tvForgotPW.setOnClickListener {
+        binding.tvForgotPW.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
             navController.navigate(R.id.action_signInFragment2_to_forgotPasswordFragment2)
         }

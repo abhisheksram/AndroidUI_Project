@@ -3,29 +3,27 @@ package com.example.androidui
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import com.example.androidui.R
+import com.example.androidui.databinding.FragmentFilterBinding
 import com.example.androidui.util.showToast
-import kotlinx.android.synthetic.main.fragment_filter.*
 
 class FilterFragment : Fragment(R.layout.fragment_filter) {
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val binding = FragmentFilterBinding.bind(view)
 
-        tvClearAll.setOnClickListener {
-            chipCategories.clearCheck()
+        binding.tvClearAll.setOnClickListener {
+            binding.chipCategories.clearCheck()
         }
-        tvClearAllDietary.setOnClickListener {
-            chipDietary.clearCheck()
+        binding.tvClearAllDietary.setOnClickListener {
+            binding.chipDietary.clearCheck()
         }
-        tvClearAllPrice.setOnClickListener {
-            chipPriceRange.clearCheck()
+        binding.tvClearAllPrice.setOnClickListener {
+            binding.chipPriceRange.clearCheck()
         }
 
-        btnApplyFilters.setOnClickListener {
+        binding.btnApplyFilters.setOnClickListener {
             this.context?.showToast("Filters are Applied")
 
             requireActivity().onBackPressed()

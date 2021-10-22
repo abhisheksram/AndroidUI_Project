@@ -9,8 +9,8 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.androidui.R
 import com.example.androidui.common.Constants
+import com.example.androidui.databinding.FragmentVerifyMobileNoBinding
 import com.example.androidui.util.showToast
-import kotlinx.android.synthetic.main.fragment_verify_mobile_no.*
 
 
 class VerifyMobileNoFragment : Fragment(R.layout.fragment_verify_mobile_no) {
@@ -18,37 +18,38 @@ class VerifyMobileNoFragment : Fragment(R.layout.fragment_verify_mobile_no) {
     @SuppressLint("SetTextI18n", "RestrictedApi")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val binding = FragmentVerifyMobileNoBinding.bind(view)
 
         val args = this.arguments
         val phone = args?.getString(Constants.Bundles.phone)
 
-        tvReceivePhone.text = "Enter the 4-Digit code sent to you at    $phone"
+        binding.tvReceivePhone.text = "Enter the 4-Digit code sent to you at    $phone"
 
-        etCode1.doOnTextChanged { _, _, _, after ->
+        binding.etCode1.doOnTextChanged { _, _, _, after ->
             if (after == 1) {
-                etCode2.requestFocus()
+                binding.etCode2.requestFocus()
             }
         }
-        etCode2.doOnTextChanged { _, _, _, after ->
+        binding.etCode2.doOnTextChanged { _, _, _, after ->
             if (after == 1) {
-                etCode3.requestFocus()
+                binding.etCode3.requestFocus()
             }
         }
-        etCode3.doOnTextChanged { _, _, _, after ->
+        binding.etCode3.doOnTextChanged { _, _, _, after ->
             if (after == 1) {
-                etCode4.requestFocus()
+                binding.etCode4.requestFocus()
             }
         }
-        etCode4.doOnTextChanged { _, _, _, after ->
+        binding.etCode4.doOnTextChanged { _, _, _, after ->
             if (after == 1) {
-                btnContinue.requestFocus()
+                binding.btnContinue.requestFocus()
             }
         }
 
-        btnContinue.setOnClickListener {
+        binding.btnContinue.setOnClickListener {
 
-            if (etCode1.text.isNullOrEmpty() || etCode2.text.isNullOrEmpty() ||
-                etCode3.text.isNullOrEmpty() || etCode4.text.isNullOrEmpty()
+            if (binding.etCode1.text.isNullOrEmpty() || binding.etCode2.text.isNullOrEmpty() ||
+                binding.etCode3.text.isNullOrEmpty() || binding.etCode4.text.isNullOrEmpty()
             ) {
                 this.context?.showToast("Please fill One Time Password to continue")
             } else {

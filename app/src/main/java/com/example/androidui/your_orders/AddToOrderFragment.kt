@@ -8,61 +8,61 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.androidui.R
 import com.example.androidui.common.Constants
+import com.example.androidui.databinding.FragmentAddToOrderBinding
 import com.example.androidui.util.showToast
-import kotlinx.android.synthetic.main.fragment_add_to_order.*
-
 
 class AddToOrderFragment : Fragment(R.layout.fragment_add_to_order) {
 
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val binding = FragmentAddToOrderBinding.bind(view)
 
         val args = this.arguments
         val title = args?.getString(Constants.Prefs.title)
         val image = args?.getInt(Constants.Prefs.image)
 
-        imageAddToOrder.setImageResource(image!!)
-        tvAddToOrderName.text = title
+        binding.imageAddToOrder.setImageResource(image!!)
+        binding.tvAddToOrderName.text = title
 
-        btnAddToOrder.setOnClickListener {
+        binding.btnAddToOrder.setOnClickListener {
             val singleNavController: NavController = Navigation.findNavController(view)
             singleNavController.navigate(R.id.action_addToOrderFragment2_to_yourOrdersActivity)
         }
 
-        btnAddSpecialInstructions.setOnClickListener {
+        binding.btnAddSpecialInstructions.setOnClickListener {
             this.context?.showToast("Currently this option is not available")
         }
 
         var count = 0
         if (count < 10) {
-            tvAddToOrderCount.text = "0$count"
+            binding.tvAddToOrderCount.text = "0$count"
         } else {
-            tvAddToOrderCount.text = "$count"
+            binding.tvAddToOrderCount.text = "$count"
         }
-        btnAddtoOrderPlus.setOnClickListener {
+        binding.btnAddtoOrderPlus.setOnClickListener {
             count += 1
             if (count < 10) {
-                tvAddToOrderCount.text = "0$count"
+                binding.tvAddToOrderCount.text = "0$count"
             } else {
-                tvAddToOrderCount.text = "$count"
+                binding.tvAddToOrderCount.text = "$count"
             }
         }
 
-        btnAddToOrderMinus.setOnClickListener {
+        binding.btnAddToOrderMinus.setOnClickListener {
             count -= 1
             if (count > 0) {
                 if (count < 10) {
-                    tvAddToOrderCount.text = "0$count"
+                    binding.tvAddToOrderCount.text = "0$count"
                 } else {
-                    tvAddToOrderCount.text = "$count"
+                    binding.tvAddToOrderCount.text = "$count"
                 }
             } else {
                 count = 0
                 if (count < 10) {
-                    tvAddToOrderCount.text = "0$count"
+                    binding.tvAddToOrderCount.text = "0$count"
                 } else {
-                    tvAddToOrderCount.text = "$count"
+                    binding.tvAddToOrderCount.text = "$count"
                 }
             }
         }

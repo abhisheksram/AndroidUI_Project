@@ -12,15 +12,18 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.androidui.LocationActivity
 import com.example.androidui.R
 import com.example.androidui.common.Constants
-import kotlinx.android.synthetic.main.activity_login.*
+import com.example.androidui.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityLoginBinding
 
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val pref_signed_in = "Sign_IN"
 
@@ -37,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
             navHost.findNavController().setGraph(R.navigation.nav_sign_in)
             navController = navHost.navController
 
-            setSupportActionBar(signInToolbar)
+            setSupportActionBar(binding.signInToolbar)
             setupActionBarWithNavController(navController)
         }
     }

@@ -3,22 +3,22 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_home2"
         android:icon="@drawable/bottom_nav_food"
         android:title="@string/home" />
 
     <item
-        android:id="@+id/navigation_search"
+        android:id="@+id/navigation_search2"
         android:icon="@drawable/bottom_nav_search"
         android:title="@string/search" />
 
     <item
-        android:id="@+id/navigation_orders"
+        android:id="@+id/navigation_orders2"
         android:icon="@drawable/bottom_nav_orders"
         android:title="@string/orders" />
 
     <item
-        android:id="@+id/navigation_profile"
+        android:id="@+id/navigation_profile2"
         android:icon="@drawable/bottom_nav_profile"
         android:title="@string/profile" />
 

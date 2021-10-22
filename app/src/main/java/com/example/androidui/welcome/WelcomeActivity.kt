@@ -17,11 +17,12 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.example.androidui.R
 import com.example.androidui.common.Constants
+import com.example.androidui.databinding.ActivityWelcomeBinding
 import com.example.androidui.login.LoginActivity
-import kotlinx.android.synthetic.main.activity_welcome.*
-
 
 class WelcomeActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityWelcomeBinding
 
     private lateinit var welcomeAdapter: WelcomeAdapter
     private lateinit var sharedPreferences: SharedPreferences
@@ -29,8 +30,8 @@ class WelcomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_welcome)
-
+        binding = ActivityWelcomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
             actionBar?.hide()
 
         sharedPreferences = getSharedPreferences(Constants.SharedPreference.slide, Context.MODE_PRIVATE)
@@ -42,17 +43,17 @@ class WelcomeActivity : AppCompatActivity() {
 
         welcomeAdapter = WelcomeAdapter(supportFragmentManager, lifecycle)
         dotsIndicator()
-        welcomeViewPager.adapter = welcomeAdapter
-        welcomeViewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
+        binding.welcomeViewPager.adapter = welcomeAdapter
+        binding.welcomeViewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 setDots(position)
             }
         })
 
-        btnGetStarted.setOnClickListener{
-            if (welcomeViewPager.currentItem +1 < welcomeAdapter.itemCount){
-                welcomeViewPager.currentItem += 1
+        binding.btnGetStarted.setOnClickListener{
+            if (binding.welcomeViewPager.currentItem +1 < welcomeAdapter.itemCount){
+                binding.welcomeViewPager.currentItem += 1
             }else {
                 startActivity(Intent(applicationContext,LoginActivity::class.java))
                 finish()
@@ -74,14 +75,14 @@ class WelcomeActivity : AppCompatActivity() {
                 this?.setImageDrawable(ContextCompat.getDrawable(applicationContext,R.drawable.indicator_inactive))
                 this?.layoutParams = layoutParams
             }
-            lytDots.addView(mDots[i])
+            binding.lytDots.addView(mDots[i])
         }
     }
 
     fun setDots(index : Int){
-        val childCount = lytDots.childCount
+        val childCount = binding.lytDots.childCount
         for (i in 0 until childCount){
-            val imageView = lytDots[i] as ImageView
+            val imageView = binding.lytDots[i] as ImageView
             if (i == index){
                 imageView.setImageDrawable(ContextCompat.getDrawable(applicationContext,R.drawable.indicator_active))
             }

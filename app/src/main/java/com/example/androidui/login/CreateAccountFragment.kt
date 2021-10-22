@@ -10,28 +10,29 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.androidui.R
 import com.example.androidui.common.Constants
+import com.example.androidui.databinding.FragmentCreateAccountBinding
 import com.example.androidui.util.showToast
-import kotlinx.android.synthetic.main.fragment_create_account.*
 
 
 class CreateAccountFragment : Fragment(R.layout.fragment_create_account) {
+
 
     private val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        super.onViewCreated(view, savedInstanceState)
+        val binding = FragmentCreateAccountBinding.bind(view)
 
         val sharedPreferences: SharedPreferences? =
             context?.getSharedPreferences(Constants.SighIn.email, Context.MODE_PRIVATE)
 
         val editor: SharedPreferences.Editor? = sharedPreferences?.edit()
 
-        btnSignUp.setOnClickListener {
+        binding.btnSignUp.setOnClickListener {
 
-            val name = etCreateName.text.toString()
-            val email = etCreateEmailID.text.toString()
-            val password = etCreatePW.text.toString()
+            val name = binding.etCreateName.text.toString()
+            val email = binding.etCreateEmailID.text.toString()
+            val password = binding.etCreatePW.text.toString()
 
             if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
 
@@ -58,7 +59,7 @@ class CreateAccountFragment : Fragment(R.layout.fragment_create_account) {
                     }
         }
 
-        tvHaveAccount.setOnClickListener {
+        binding.tvHaveAccount.setOnClickListener {
             val navController: NavController = Navigation.findNavController(view)
             navController.navigate(R.id.action_createAccountFragment2_to_signInFragment2)
         }

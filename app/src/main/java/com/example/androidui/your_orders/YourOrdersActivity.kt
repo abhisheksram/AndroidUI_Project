@@ -7,21 +7,24 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.androidui.R
-import kotlinx.android.synthetic.main.activity_your_orders.*
+import com.example.androidui.databinding.ActivityYourOrdersBinding
 
 class YourOrdersActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityYourOrdersBinding
 
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_your_orders)
+        binding = ActivityYourOrdersBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val navHost = supportFragmentManager.findFragmentById(R.id.navHostYourOrders) as NavHostFragment
         navHost.findNavController().setGraph(R.navigation.nav_your_orders)
         navController = navHost.navController
 
-        setSupportActionBar(yourOrdersToolbar)
+        setSupportActionBar(binding.yourOrdersToolbar)
         setupActionBarWithNavController(navController)
     }
 

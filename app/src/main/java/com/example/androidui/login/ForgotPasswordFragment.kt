@@ -9,21 +9,23 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.androidui.R
 import com.example.androidui.common.Constants
+import com.example.androidui.databinding.FragmentForgotPasswordBinding
 import com.example.androidui.util.showToast
-import kotlinx.android.synthetic.main.fragment_forgot_password.*
 
 
 class ForgotPasswordFragment : Fragment(R.layout.fragment_forgot_password) {
+
 
     private val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
 
     @SuppressLint("RestrictedApi")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val binding = FragmentForgotPasswordBinding.bind(view)
 
-        btnResetPassword.setOnClickListener {
+        binding.btnResetPassword.setOnClickListener {
 
-            val email = etEmailID.text.toString()
+            val email = binding.etEmailID.text.toString()
 
             if (email.isEmpty()) {
 

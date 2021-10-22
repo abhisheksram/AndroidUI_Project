@@ -14,6 +14,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.androidui.common.Constants
+import com.example.androidui.databinding.ActivityLocationBinding
 import com.example.androidui.util.showToast
 import com.google.android.gms.common.api.Status
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -22,11 +23,12 @@ import com.google.android.libraries.places.api.Places
 import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
-import kotlinx.android.synthetic.main.activity_location.*
 import java.util.*
 
 
 class LocationActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityLocationBinding
 
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     private lateinit var myAddress: String
@@ -35,7 +37,8 @@ class LocationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_location)
+        binding = ActivityLocationBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         sharedPreferences =
             this.getSharedPreferences(Constants.Location.location, Context.MODE_PRIVATE)
@@ -48,7 +51,7 @@ class LocationActivity : AppCompatActivity() {
 
         initAutoCompletePlaces()
 
-        btnUseCurrentLocation.setOnClickListener {
+        binding.btnUseCurrentLocation.setOnClickListener {
             getCurrentLocation()
 
         }
