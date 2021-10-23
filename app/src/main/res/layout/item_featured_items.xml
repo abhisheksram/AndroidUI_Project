@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/yugothil"
+            android:textStyle="bold"
             android:textSize="@dimen/t16"
             app:layout_constraintStart_toStartOf="@+id/imageFeaturedItems"
             app:layout_constraintTop_toBottomOf="@+id/imageFeaturedItems" />

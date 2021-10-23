@@ -26,6 +26,7 @@
         android:text="@string/textview"
         android:textSize="18sp"
         android:fontFamily="@font/yugothil"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/image_single_restaurants"
         app:layout_constraintTop_toTopOf="@+id/image_single_restaurants" />
 

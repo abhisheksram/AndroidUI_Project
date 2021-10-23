@@ -15,9 +15,9 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/yugothil"
         android:text="@string/welcome_to_tamang_food_services"
+        android:textStyle="bold"
         android:textColor="#010F07"
         android:textSize="33sp"
-        android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,6 +53,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothil"
             android:text="@string/email_address_cap"
+            android:textStyle="bold"
             android:textAppearance="@style/email_address"
             android:textColor="#868686"
             android:textSize="@dimen/t16" />
@@ -90,6 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yugothil"
+            android:textStyle="bold"
             android:text="@string/password"
             android:textAppearance="@style/email_address"
             android:textColor="#868686"
@@ -120,6 +122,7 @@
         android:layout_marginEnd="40dp"
         android:background="@color/trans"
         android:fontFamily="@font/yugothil"
+        android:textStyle="bold"
         android:gravity="center_vertical"
         android:paddingHorizontal="10dp"
         android:text="@string/forgot_password_1"
@@ -172,6 +175,7 @@
             android:fontFamily="@font/yugothil"
             android:gravity="center"
             android:text="@string/don_t_have_account"
+            android:textStyle="bold"
             android:textColor="#010F07"
             android:textSize="12sp" />
 
@@ -184,6 +188,7 @@
             android:fontFamily="@font/yugothil"
             android:gravity="center"
             android:text="@string/create_new_account"
+            android:textStyle="bold"
             android:textColor="#EEA734"
             android:textSize="12sp" />
 

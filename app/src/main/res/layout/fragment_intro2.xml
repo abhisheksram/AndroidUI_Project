@@ -38,8 +38,8 @@
 
         <View
             android:id="@+id/view"
-            android:layout_width="330.62dp"
-            android:layout_height="330.62dp"
+            android:layout_width="300.62dp"
+            android:layout_height="300.62dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/intro2_bg"
             app:layout_constraintBottom_toBottomOf="parent"

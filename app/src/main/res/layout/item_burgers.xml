@@ -91,6 +91,7 @@
             android:layout_marginTop="10dp"
             android:textSize="20sp"
             android:fontFamily="@font/yugothil"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/imageBurgers"
             app:layout_constraintTop_toBottomOf="@+id/imageBurgers" />
 

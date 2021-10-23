@@ -14,6 +14,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/yugothil"
         android:text="@string/reset_email_sent"
+        android:textStyle="bold"
         android:textColor="#010F07"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"

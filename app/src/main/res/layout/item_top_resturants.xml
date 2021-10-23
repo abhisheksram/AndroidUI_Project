@@ -26,6 +26,7 @@
         android:layout_marginStart="21dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/yugothil"
+        android:textStyle="bold"
         android:text="@string/textview"
         android:textSize="@dimen/t16"
         app:layout_constraintStart_toStartOf="parent"

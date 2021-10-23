@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
             android:layout_marginEnd="40dp"
-            android:layout_marginBottom="-20dp"
+            android:layout_marginBottom="-40dp"
             android:fontFamily="@font/poppins_bold"
             android:gravity="center_horizontal|top"
             android:text="@string/tamang_foodservice"
@@ -73,8 +73,8 @@
 
         <View
             android:id="@+id/view5"
-            android:layout_width="350.62dp"
-            android:layout_height="350.62dp"
+            android:layout_width="380.62dp"
+            android:layout_height="380.62dp"
             android:layout_gravity="center_horizontal"
             android:layout_margin="30dp"
             android:layout_marginBottom="20dp"
