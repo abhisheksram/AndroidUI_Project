@@ -118,6 +118,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         dotsIndicator()
 
         binding.viewPagerHome1.adapter = pagerAdapter
+
         binding.viewPagerHome1.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)

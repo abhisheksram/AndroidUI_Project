@@ -61,7 +61,6 @@ class SingleRestaurantFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-
         return inflater.inflate(R.layout.fragment_single_restaurant, container, false)
     }
 
